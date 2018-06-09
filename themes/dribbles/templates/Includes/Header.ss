@@ -1,5 +1,5 @@
 <section class="hero is-primary">
-  <div class="hero-body">
+  <div class="hero-head">
     <div class="container">
 			<a href="$BaseHref" rel="home">
       <h1 class="title">
@@ -16,7 +16,28 @@
 					$SearchForm
 				</div>
 			<% end_if %>
-			<!--<% include Navigation %>-->
     </div>
+		<nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+						<% loop Menu(1) %>
+            	<span></span>
+            	<span></span>
+            	<span></span>
+						<% end_loop %>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+						<% loop Menu(1) %>
+							<a href="$Link" class="navbar-item $LinkingMode">
+								$MenuTitle.XML
+							</a>
+						<% end_loop %>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </section>
