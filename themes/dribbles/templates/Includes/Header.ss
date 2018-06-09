@@ -25,7 +25,7 @@
   </div>
 	<div class="hero-body">
 		<div class="container">
-			<a href="$BaseHref" rel="home">
+			<a href="$BaseHref" rel="home"></a>
       <h1 class="title">
         $SiteConfig.Title
       </h1>
