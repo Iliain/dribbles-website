@@ -15,7 +15,7 @@
           <div class="navbar-end">
 						<% loop Menu(1) %>
 							<a href="$Link" class="navbar-item $LinkingMode">
-								$MenuTitle.XML
+								$Title
 							</a>
 						<% end_loop %>
           </div>
