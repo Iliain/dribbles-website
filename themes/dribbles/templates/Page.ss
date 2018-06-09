@@ -13,13 +13,13 @@
   <![endif]-->
 </head>
 <body class="">
-
+<% include Header %>
 <section class="section">
     <div class="container">
       $Layout
     </div>
-  </section>
-
+</section>
+<% include Footer %>
 
 </body>
 </html>
