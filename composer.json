@@ -16,6 +16,12 @@
             "mysite/_config/*",
             ".env.example"
         ],
+        "expose": [
+            "themes/dribbles/css",
+            "themes/dribbles/sass",
+            "themes/dribbles/javascript",
+            "themes/dribbles/assets"
+        ],
         "public-files": [
             "assets/*",
             "favicon.ico"
