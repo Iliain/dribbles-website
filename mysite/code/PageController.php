@@ -29,7 +29,7 @@ class PageController extends ContentController
         // You can include any CSS or JS required by your project here.
         // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
 
-        Requirements::css("../css/bulma.css");
+        Requirements::css("css/bulma.css");
         Requirements::javascript("//code.jquery.com/jquery-1.7.2.min.js");
         Requirements::javascript("https://use.fontawesome.com/releases/v5.0.7/js/all.js");
 
