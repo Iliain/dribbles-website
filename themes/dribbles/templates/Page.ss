@@ -5,21 +5,20 @@
         <% base_tag %>
         <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.T$
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.$
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         $MetaTags(false)
         <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link rel="shortcut icon" href="themes/simple/images/favicon.ico" />
 </head>
-<body class="$ClassName.ShortName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScri$
+<body class="">
 <% include Header %>
-<div class="main" role="main">
-        <div class="inner typography line">
-                $Layout
-        </div>
-</div>
+<section class="section">
+    <div class="container">
+      $Layout
+    </div>
+  </section>
 <% include Footer %>
 
 </body>
