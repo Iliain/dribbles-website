@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
 
 class PageController extends ContentController
