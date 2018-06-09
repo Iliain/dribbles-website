@@ -16,7 +16,7 @@
 					$SearchForm
 				</div>
 			<% end_if %>
-			<% include Navigation %>
+			<!--<% include Navigation %>-->
     </div>
   </div>
 </section>
