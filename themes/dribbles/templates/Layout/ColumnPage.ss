@@ -12,7 +12,7 @@
       <h1 class="title">My Characters</h1>
       <% loop Character %>
         <a href="$Link">
-          <div class="box" style="margin-bottom: 10px">
+          <div class="box" style="margin-bottom: 20px">
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
@@ -32,7 +32,6 @@
             </article>
           </div>
         </a>
-        <br>
       <% end_loop %>
     </div>
   </div>
