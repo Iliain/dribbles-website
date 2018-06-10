@@ -9,9 +9,6 @@
       </div>
     </div>
     <div class="column">
-      <% loop $Characters %>
-        
-      <% end_loop %>
     </div>
   </div>
 </div>
