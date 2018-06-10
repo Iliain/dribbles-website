@@ -8,8 +8,8 @@
         $CommentsForm
       </div>
     </div>
-    <div class="column">W
-      <h1>Characters</h1>
+    <div class="column">
+      <h1 class="title">Characters</h1>
       <% loop Character %>
         <a href="$Link.URL">
           <div class="box">
