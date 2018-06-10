@@ -1,5 +1,7 @@
 <?php
 
+use ColumnPage;
+
 use SilverStripe\ORM\DataObject;
 //use SilverStripe\Forms\TextField;
 //use SilverStripe\AssetAdmin\Forms\UploadField;
