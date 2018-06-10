@@ -32,6 +32,7 @@
             </article>
           </div>
         </a>
+        <br>
       <% end_loop %>
     </div>
   </div>
