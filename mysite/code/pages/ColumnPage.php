@@ -1,6 +1,6 @@
 <?php
 
-use Character;
+use SilverStripe\DataObject\Character;
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;

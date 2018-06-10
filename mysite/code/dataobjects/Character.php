@@ -1,5 +1,7 @@
 <?php
 
+namespace SilverStripe\DataObject;
+
 use ColumnPage;
 
 use SilverStripe\ORM\DataObject;
