@@ -1,6 +1,6 @@
 <div id="$Name">
-	<% if $Title %><label class="left" for="$ID">$Title</label><% end_if %>
-	<div class="middleColumn">
+	<% if $Title %><label class="label" for="$ID">$Title</label><% end_if %>
+	<div class="control">
 		$Field
 	</div>
 	<% if $RightTitle %><span id="{$Name}_right_title" class="right-title">$RightTitle</span><% end_if %>
