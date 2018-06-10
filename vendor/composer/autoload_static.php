@@ -54,6 +54,8 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
             'SilverStripe\\VendorPlugin\\' => 26,
             'SilverStripe\\UserForms\\Tests\\' => 29,
             'SilverStripe\\UserForms\\' => 23,
+            'SilverStripe\\TagField\\Tests\\' => 28,
+            'SilverStripe\\TagField\\' => 22,
             'SilverStripe\\SpamProtection\\Tests\\' => 34,
             'SilverStripe\\SpamProtection\\' => 28,
             'SilverStripe\\SiteConfig\\Tests\\' => 30,
@@ -65,6 +67,8 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
             'SilverStripe\\RecipePlugin\\' => 26,
             'SilverStripe\\ORM\\Tests\\' => 23,
             'SilverStripe\\ORM\\' => 17,
+            'SilverStripe\\Lumberjack\\Tests\\' => 30,
+            'SilverStripe\\Lumberjack\\' => 24,
             'SilverStripe\\Logging\\Tests\\' => 27,
             'SilverStripe\\Logging\\' => 21,
             'SilverStripe\\GraphQL\\' => 21,
@@ -87,6 +91,8 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
             'SilverStripe\\CMS\\Tests\\Behaviour\\' => 33,
             'SilverStripe\\CMS\\Tests\\' => 23,
             'SilverStripe\\CMS\\' => 17,
+            'SilverStripe\\Blog\\Tests\\' => 24,
+            'SilverStripe\\Blog\\' => 18,
             'SilverStripe\\Assets\\Tests\\' => 26,
             'SilverStripe\\Assets\\' => 20,
             'SilverStripe\\AssetAdmin\\Tests\\Behat\\Context\\' => 44,
@@ -239,6 +245,14 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
         array (
             0 => __DIR__ . '/..' . '/silverstripe/userforms/code',
         ),
+        'SilverStripe\\TagField\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/tagfield/tests',
+        ),
+        'SilverStripe\\TagField\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/tagfield/src',
+        ),
         'SilverStripe\\SpamProtection\\Tests\\' => 
         array (
             0 => __DIR__ . '/..' . '/silverstripe/spamprotection/tests',
@@ -282,6 +296,14 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
         'SilverStripe\\ORM\\' => 
         array (
             0 => __DIR__ . '/..' . '/silverstripe/framework/src/ORM',
+        ),
+        'SilverStripe\\Lumberjack\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/lumberjack/tests',
+        ),
+        'SilverStripe\\Lumberjack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/lumberjack/src',
         ),
         'SilverStripe\\Logging\\Tests\\' => 
         array (
@@ -372,6 +394,14 @@ class ComposerStaticInitd83d01f7c205b1ab8434e9d840f73d69
         'SilverStripe\\CMS\\' => 
         array (
             0 => __DIR__ . '/..' . '/silverstripe/cms/code',
+        ),
+        'SilverStripe\\Blog\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/blog/tests',
+        ),
+        'SilverStripe\\Blog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silverstripe/blog/src',
         ),
         'SilverStripe\\Assets\\Tests\\' => 
         array (
