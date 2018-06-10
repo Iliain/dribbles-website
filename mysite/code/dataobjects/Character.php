@@ -1,7 +1,6 @@
 <?php
 
 use SilverStripe\ORM\DataObject;
-use SilverStripe\Custom\ColumnPage;
 //use SilverStripe\Forms\TextField;
 //use SilverStripe\AssetAdmin\Forms\UploadField;
 //use SilverStripe\Versioned\Versioned;
