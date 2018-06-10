@@ -1,7 +1,7 @@
 <div class="container">
-  <h1 class="title">$MenuTitle</h1>
   <div class="columns">
     <div class="column is-three-fifths">
+      <h1 class="title">$MenuTitle</h1>
       <div class="content">
         $Content
         $Form
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="column">
-      <h1 class="title">Characters</h1>
+      <h1 class="title">My Characters</h1>
       <% loop Character %>
         <a href="$Link.URL">
           <div class="box">
@@ -36,3 +36,8 @@
     </div>
   </div>
 </div>
+<style>
+  .box:hover {
+    background-color: #eaeaea;
+  }
+</style>
