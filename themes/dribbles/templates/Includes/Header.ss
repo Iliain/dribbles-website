@@ -3,7 +3,7 @@
 		<nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span id="navbar-burger" class="navbar-burger burger" data-target="navbarMenuHeroA">
 						<% loop Menu(1) %>
             	<span></span>
             	<span></span>
