@@ -8,3 +8,6 @@ UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
     default_badge: "bottomright" #Default badge position (bottomright, bottomleft or inline, defaults to bottomright)
     proxy_server: "" #Your proxy server address (optional)
     proxy_auth: "" #Your proxy server authentication information (optional)
+UserForm:
+  extensions:
+    - MyFormDecorator
