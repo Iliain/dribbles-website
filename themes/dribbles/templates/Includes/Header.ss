@@ -42,6 +42,7 @@
       <div class="container">
         <ul>
           <% if Menu(2) %>
+              <li><a href="https://dribbles.info">Home</a></li>
             <% loop Menu(2) %>
               <li class="<% if $isCurrent %>is-active<% end_if %>"><a href="$Link">$Title</a></li>
             <% end_loop %>
