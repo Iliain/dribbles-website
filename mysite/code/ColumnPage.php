@@ -1,5 +1,7 @@
 <?php
 
+namespace SilverStripe\ColumnPage;
+
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
