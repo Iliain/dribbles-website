@@ -1,4 +1,5 @@
 <?php
+use SilverStripe\Core\Extension;
 
 class MyFormDecorator extends Extension {
     public function updateFormActions(&$actions) {
