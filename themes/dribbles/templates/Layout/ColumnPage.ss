@@ -12,7 +12,7 @@
       <h1 class="title">My Characters</h1>
       <% loop Character %>
         <a href="$Link">
-          <div class="box">
+          <div class="box" style="padding: 10px">
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
