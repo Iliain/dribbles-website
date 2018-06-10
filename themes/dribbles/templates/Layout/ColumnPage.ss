@@ -6,23 +6,25 @@
         $Content
         $Form
         $CommentsForm
-        <div class="tile is-parent is-vertical" style="max-width: 50%;">
-          <a href="https://dribbles.info/wow/my-guild/">
-            <article class="tile is-child notification is-warning media">
-              <div class="media-right">
+        <a href="https://dribbles.info/wow/my-guild/">
+          <div class="box" style="margin-bottom: 10px">
+            <article class="media" style="background-color:#ffdd57">
+              <div class="media-left">
                 <figure class="image is-64x64">
                   <img src="https://cdn.discordapp.com/icons/364620729557188610/2aa8cb4ef2151e263abc3c55b41984bd.png" alt="Image">
                 </figure>
               </div>
-              <p class="title">Orthodox</p>
-              <p class="subtitle">US-Frostmourne</p>
-              <div class="content">
-                Orthodox is the guild I've been a part of since the release of The Nighthold in Legion.
+              <div class="media-content">
+                <p class="title">Orthodox</p>
+                <p class="subtitle">US-Frostmourne</p>
+                <div class="content">
+                  Orthodox is the guild I've been a part of since the release of The Nighthold in Legion.
+                </div>
               </div>
             </article>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
     <div class="column">
       <h1 class="title">My Characters</h1>
