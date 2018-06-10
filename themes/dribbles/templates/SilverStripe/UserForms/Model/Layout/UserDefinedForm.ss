@@ -9,11 +9,8 @@
 
 <style>
   input[type="submit"] {
-    background-color: white;
-    border-color: #dbdbdb;
-    color: #363636;
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-    max-width: 100%;
-    width: 100%;
+    background-color: #00d1b2;
+    border-color: transparent;
+    color: #fff;
   }
 </style>
