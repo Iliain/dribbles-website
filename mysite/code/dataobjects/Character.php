@@ -1,7 +1,7 @@
 <?php
 //use SilverStripe\Forms\TextField;
 //use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\ORM\DataObject;
+//use SilverStripe\ORM\DataObject;
 //use SilverStripe\Versioned\Versioned;
 //use SilverStripe\Assets\Image;
 
@@ -9,10 +9,10 @@ use SilverStripe\ORM\DataObject;
 class Character extends DataObject {
 
     private static $db = [
-        'Name'    =>  'Text',
-        'Class'   =>  'Text'
-        'Link'    =>  'Text',
-        'ilvl'    =>  'Text',
+        'Name'    =>  'Varchar',
+        'Class'   =>  'Varchar'
+        'Link'    =>  'Varchar',
+        'ilvl'    =>  'Varchar(255)',
     ];
 
     private static $has_one = [
