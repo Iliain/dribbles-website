@@ -7,7 +7,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="icon" type="image/png" href="$ThemeDir/assets/favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="$ThemeDir/assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="$ThemeDir/assets/favicon-16x16.png" sizes="16x16" />
   $MetaTags(false)
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
