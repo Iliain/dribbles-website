@@ -3,6 +3,14 @@
 		<nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
+          <a class="navbar-item">
+            <h3>$SiteConfig.Title</h3>
+            <% if $SiteConfig.Tagline %>
+            <h4 class="subtitle">
+              $SiteConfig.Tagline
+            </h4>
+            <% end_if %>
+          </a>
           <span id="navbar-burger" class="navbar-burger burger" data-target="navbarMenuHeroA">
 						<% loop Menu(1) %>
             	<span></span>
@@ -27,13 +35,8 @@
 		<div class="container">
 			<a href="$BaseHref" rel="home"></a>
       <h1 class="title">
-        $SiteConfig.Title
+        $Title
       </h1>
-			<% if $SiteConfig.Tagline %>
-      <h2 class="subtitle">
-        $SiteConfig.Tagline
-      </h2>
-			<% end_if %>
 			<% if $SearchForm %>
 				<span class="search-dropdown-icon">L</span>
 				<div class="search-bar">
