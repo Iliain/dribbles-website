@@ -9,14 +9,14 @@ use SilverStripe\ORM\DataObject;
 class Character extends DataObject {
 
     private static $db = [
-        'Name'    =>  'Varchar(255)',
-        'Class'   =>  'Varchar(255)'
-        'Link'    =>  'Varchar(255)',
-        'ilvl'    =>  'Varchar(255)',
+        'Name'    =>  'Text',
+        'Class'   =>  'Text'
+        'Link'    =>  'Text',
+        'ilvl'    =>  'Text',
     ];
 
     private static $has_one = [
-        'ColumnPage'      => ColumnPage::class,
+        //'ColumnPage'      => ColumnPage::class,
         //'CharacterImage'  => Image::class
     ];
 
