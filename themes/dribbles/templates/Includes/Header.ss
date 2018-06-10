@@ -5,6 +5,7 @@
         <div class="navbar-brand">
           <a href="$BaseHref" class="navbar-item">
             <h2>$SiteConfig.Title</h2>
+            <img src="../assets/logo.png" alt="Logo">
           </a>
           <span id="navbar-burger" class="navbar-burger burger" data-target="navbarMenuHeroA">
 						<% loop Menu(1) %>
