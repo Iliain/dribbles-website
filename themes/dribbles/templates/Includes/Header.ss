@@ -42,4 +42,15 @@
 			<% end_if %>
     </div>
 	</div>
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <% loop Menu(2) %>
+            <li><a>$Title</a></li>
+          <% end_loop %>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </section>
