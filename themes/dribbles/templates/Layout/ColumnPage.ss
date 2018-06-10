@@ -8,10 +8,10 @@
         $CommentsForm
         <div class="tile is-parent is-vertical" style="max-width: 50%;">
           <a href="https://dribbles.info/wow/my-guild/">
-            <article class="tile is-child notification is-warning">
+            <article class="tile is-child notification is-warning media">
               <div class="media-right">
                 <figure class="image is-64x64">
-                  <img src="" alt="Image">
+                  <img src="https://cdn.discordapp.com/icons/364620729557188610/2aa8cb4ef2151e263abc3c55b41984bd.png" alt="Image">
                 </figure>
               </div>
               <p class="title">Orthodox</p>
