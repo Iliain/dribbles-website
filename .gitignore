@@ -1,7 +1,5 @@
 /silverstripe-cache/
 /.env
-/vendor/
-!/vendor/silverstripe/userforms/
 /themes/simple/
 /resources/
 /public/resources/
