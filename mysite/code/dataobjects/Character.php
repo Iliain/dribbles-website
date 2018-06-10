@@ -1,7 +1,7 @@
 <?php
 
 use SilverStripe\ORM\DataObject;
-use SilverStripe\ColumnPage;
+use SilverStripe\Custom\ColumnPage;
 //use SilverStripe\Forms\TextField;
 //use SilverStripe\AssetAdmin\Forms\UploadField;
 //use SilverStripe\Versioned\Versioned;
@@ -18,7 +18,7 @@ class Character extends DataObject {
     ];
 
     private static $has_one = [
-        'ColumnPage'      => ColumnPage::class
+        //'ColumnPage'      => ColumnPage::class
         //'CharacterImage'  => Image::class
     ];
 
