@@ -1,7 +1,5 @@
 <?php
 
-use Page;
-
 class ColumnPage extends Page
 {
     private static $db = [];

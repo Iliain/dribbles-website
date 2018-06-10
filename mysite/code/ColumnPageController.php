@@ -1,6 +1,5 @@
 <?php
 
-use PageController;
 use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
 
