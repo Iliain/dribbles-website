@@ -20,7 +20,7 @@ class Character extends DataObject {
         //'CharacterImage'  => Image::class
     ];
 
-    private static $extensions = [
+    /*private static $extensions = [
         Versioned::class,
     ];
 
@@ -30,10 +30,10 @@ class Character extends DataObject {
         'Name'  => 'Name',
         'Class' => 'Class',
         'ilvl'  => 'ilvl'
-    ];
+    ];*/
 
-    public function getCMSFields() {
-        /*$fields = parent::getCMSFields();
+    /*public function getCMSFields() {
+        $fields = parent::getCMSFields();
         $fields->addFieldtoTab('Root.Main', TextField::create('Name','Character Name'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Class','Character Class'));
         $fields->addFieldtoTab('Root.Main', TextField::create('ilvl','Character ilvl'));
@@ -41,7 +41,7 @@ class Character extends DataObject {
         $fields->addFieldtoTab('Root.Main', $images = UploadField::create('CharacterImage','Upload Image'));
         $images
         ->setFolderName('character-images')
-        ->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);*/
-        //return $fields;
-    }
+        ->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);
+        return $fields;
+    }*/
 }
