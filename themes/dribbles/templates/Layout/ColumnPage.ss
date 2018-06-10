@@ -7,7 +7,7 @@
         $Form
         $CommentsForm
         <a href="https://dribbles.info/wow/my-guild/">
-          <div class="tile is-parent is-vertical">
+          <div class="tile is-parent is-vertical" style="max-width: 50%;">
             <article class="tile is-child notification is-warning">
               <p class="title">Orthodox</p>
               <p class="subtitle">US-Frostmourne</p>
