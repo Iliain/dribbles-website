@@ -23,7 +23,7 @@ class Character extends DataObject {
 
     private static $has_one = [
         'ColumnPage'      => ColumnPage::class,
-        'CharacterImage'  => Image::class
+        //'CharacterImage'  => Image::class
     ];
 
     /*private static $extensions = [
@@ -44,10 +44,10 @@ class Character extends DataObject {
         $fields->addFieldtoTab('Root.Main', TextField::create('Class','Character Class'));
         $fields->addFieldtoTab('Root.Main', TextField::create('ilvl','Character ilvl'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Link','Armory Link'));
-        $fields->addFieldtoTab('Root.Main', $images = UploadField::create('CharacterImage','Upload Image'));
-          $images
-            ->setFolderName('character-images')
-            ->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);
+        //$fields->addFieldtoTab('Root.Main', $images = UploadField::create('CharacterImage','Upload Image'));
+          //$images
+            //->setFolderName('character-images')
+            //->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);
         return $fields;
     }
 }
