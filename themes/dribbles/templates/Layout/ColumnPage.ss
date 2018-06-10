@@ -11,7 +11,7 @@
     <div class="column">
       <h1 class="title">My Characters</h1>
       <% loop Character %>
-        <a href="$Link.URL">
+        <a href="$Link">
           <div class="box">
             <article class="media">
               <div class="media-left">
