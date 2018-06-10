@@ -9,6 +9,9 @@
       </div>
     </div>
     <div class="column">
+      <% loop Character %>
+        <p>Test</p>
+      <% end_loop %>
     </div>
   </div>
 </div>
