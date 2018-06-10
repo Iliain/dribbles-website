@@ -1,6 +1,6 @@
 <div class="container">
   <div class="columns">
-    <div class="column is-four-fifths">
+    <div class="column is-two-thirds">
       <h1 class="title">$MenuTitle</h1>
       <div class="content">
         $Content
