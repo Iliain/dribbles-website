@@ -17,7 +17,7 @@ label.left {
     margin-bottom: .5em;
 }
 input[type="text"],
-input[type="password"],
+input[type="password"]
  {
   background-color: #fff;
   border-color: #dbdbdb;
