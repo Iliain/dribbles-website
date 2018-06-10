@@ -4,11 +4,8 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <h3>$SiteConfig.Title</h3>
+            <h2>$SiteConfig.Title</h2>
             <% if $SiteConfig.Tagline %>
-            <h4 class="subtitle">
-              $SiteConfig.Tagline
-            </h4>
             <% end_if %>
           </a>
           <span id="navbar-burger" class="navbar-burger burger" data-target="navbarMenuHeroA">
