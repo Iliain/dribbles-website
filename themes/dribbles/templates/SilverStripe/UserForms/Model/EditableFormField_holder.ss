@@ -1,4 +1,4 @@
-<div id="$Name">
+<div id="$Name" class="field">
 	<% if $Title %><label class="label" for="$ID">$Title</label><% end_if %>
 	<div class="control">
 		$Field
