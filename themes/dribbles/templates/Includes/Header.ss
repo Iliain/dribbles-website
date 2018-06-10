@@ -14,7 +14,7 @@
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
 						<% loop Menu(1) %>
-							<a href="$Link" class="navbar-item $LinkingMode">
+							<a href="$Link" class="navbar-item <% if $isCurrent %>is-active<% end_if %>">
 								$Title
 							</a>
 						<% end_loop %>
@@ -48,7 +48,7 @@
         <ul>
           <% if Menu(2) %>
             <% loop Menu(2) %>
-              <li><a href="$Link">$Title</a></li>
+              <li><a href="$Link" <% if $isCurrent %>class="is-active"<% end_if %>>$Title</a></li>
             <% end_loop %>
           <% end_if %>
         </ul>
