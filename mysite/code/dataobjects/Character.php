@@ -31,12 +31,12 @@ class Character extends DataObject {
     ];
 
     private static $versioned_gridfield_extensions = true;
-
+    */
     private static $summary_fields = [
         'Name'  => 'Name',
         'Class' => 'Class',
         'ilvl'  => 'ilvl'
-    ];*/
+    ];
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
