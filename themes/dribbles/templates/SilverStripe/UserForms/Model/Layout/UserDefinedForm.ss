@@ -22,4 +22,12 @@
     white-space: nowrap;
     border-width: 1px;
   }
+  .Actions {
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+    box-sizing: inherit;
+    display: block;
+  }
 </style>
