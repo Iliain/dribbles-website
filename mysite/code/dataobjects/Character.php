@@ -23,7 +23,7 @@ class Character extends DataObject {
         'CharacterImage'  => Image::class
     ];
 
-    private static $extensions = [
+    /*private static $extensions = [
         Versioned::class,
     ];
 
@@ -33,7 +33,7 @@ class Character extends DataObject {
         'Name'  => 'Name',
         'Class' => 'Class',
         'ilvl'  => 'ilvl'
-    ];
+    ];*/
 
     /*public function getCMSFields() {
         $fields = parent::getCMSFields();
