@@ -10,7 +10,7 @@
           <div id="guildBox" class="box" style="background-color:#ffdd57">
             <article class="media" style="">
               <div class="media-left">
-                <figure class="image is-64x64">
+                <figure class="image is-128x128">
                   <img src="https://cdn.discordapp.com/icons/364620729557188610/2aa8cb4ef2151e263abc3c55b41984bd.png" alt="Image">
                 </figure>
               </div>
@@ -33,7 +33,7 @@
           <div class="box" style="margin-bottom: 10px">
             <article class="media">
               <div class="media-left">
-                <figure class="image is-128x128">
+                <figure class="image is-64x64">
                   <img src="$CharacterImage.URL" alt="Image">
                 </figure>
               </div>
