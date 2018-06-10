@@ -42,9 +42,7 @@
       <div class="container">
         <ul>
           <% if Menu(2) %>
-            <% if $Top %>
-              <li><a href="$Link">$Title</a></li>
-            <% end_if %>
+              <li><a href="$Top.Link">$Top.Title</a></li>
             <% loop Menu(2) %>
               <li class="<% if $isCurrent %>is-active<% end_if %>"><a href="$Link">$Title</a></li>
             <% end_loop %>
