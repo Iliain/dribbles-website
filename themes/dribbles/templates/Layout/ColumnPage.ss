@@ -6,9 +6,14 @@
         $Content
         $Form
         $CommentsForm
-        <a href="https://dribbles.info/wow/my-guild/">
-          <div class="tile is-parent is-vertical" style="max-width: 50%;">
+        <div class="tile is-parent is-vertical" style="max-width: 50%;">
+          <a href="https://dribbles.info/wow/my-guild/">
             <article class="tile is-child notification is-warning">
+              <div class="media-right">
+                <figure class="image is-64x64">
+                  <img src="" alt="Image">
+                </figure>
+              </div>
               <p class="title">Orthodox</p>
               <p class="subtitle">US-Frostmourne</p>
               <div class="content">
@@ -16,8 +21,8 @@
               </div>
             </article>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
     <div class="column">
       <h1 class="title">My Characters</h1>
