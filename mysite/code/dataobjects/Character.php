@@ -6,9 +6,10 @@ use ColumnPage;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Versioned\Versioned;
 use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+//use SilverStripe\Versioned\Versioned;
+
 
 
 class Character extends DataObject {
@@ -25,7 +26,7 @@ class Character extends DataObject {
         'CharacterImage'  => Image::class
     ];
 
-    private static $extensions = [
+    /*private static $extensions = [
         Versioned::class,
     ];
 
@@ -35,7 +36,7 @@ class Character extends DataObject {
         'Name'  => 'Name',
         'Class' => 'Class',
         'ilvl'  => 'ilvl'
-    ];
+    ];*/
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
