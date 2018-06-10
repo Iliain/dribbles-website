@@ -8,27 +8,30 @@
         $CommentsForm
       </div>
     </div>
-    <div class="column">
-      <h2>Characters</h2>
+    <div class="column">W
+      <h1>Characters</h1>
       <% loop Character %>
-        <div class="box">
-          <article class="media">
-            <div class="media-left">
-              <figure class="image is-64x64">
-                <img src="$CharacterImage.URL" alt="Image">
-              </figure>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>$Name</strong> <small>$ilvl</small>
-                  <br>
-                  $Class
-                </p>
+        <a href="$Link.URL">
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="$CharacterImage.URL" alt="Image">
+                </figure>
               </div>
-            </div>
-          </article>
-        </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>$Name</strong> <small>ilvl: $ilvl</small>
+                    <br>
+                    $Class
+                    <br>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </a>
       <% end_loop %>
     </div>
   </div>
