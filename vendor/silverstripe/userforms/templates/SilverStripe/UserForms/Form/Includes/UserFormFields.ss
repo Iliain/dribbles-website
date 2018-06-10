@@ -2,4 +2,3 @@
     $FieldHolder
 <% end_loop %>
 <div class="clear"><!-- --></div>
-
