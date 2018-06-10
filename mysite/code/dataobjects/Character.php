@@ -20,10 +20,10 @@ class Character extends DataObject {
 
     private static $has_one = [
         'ColumnPage'      => ColumnPage::class
-        //'CharacterImage'  => Image::class
+        'CharacterImage'  => Image::class
     ];
 
-    /*private static $extensions = [
+    private static $extensions = [
         Versioned::class,
     ];
 
@@ -33,9 +33,9 @@ class Character extends DataObject {
         'Name'  => 'Name',
         'Class' => 'Class',
         'ilvl'  => 'ilvl'
-    ];*/
+    ];
 
-    /*public function getCMSFields() {
+    public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->addFieldtoTab('Root.Main', TextField::create('Name','Character Name'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Class','Character Class'));
@@ -46,5 +46,5 @@ class Character extends DataObject {
         ->setFolderName('character-images')
         ->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);
         return $fields;
-    }*/
+    }
 }
