@@ -43,7 +43,7 @@
     </div>
 	</div>
   <div class="hero-foot">
-    <nav class="tabs">
+    <nav class="tabs is-boxed is-fullwidth">
       <div class="container">
         <ul>
           <% if Menu(2) %>
