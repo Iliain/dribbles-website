@@ -35,7 +35,7 @@ class Character extends DataObject {
         'ilvl'  => 'ilvl'
     ];
 
-    public function getCMSFields() {
+    /*public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->addFieldtoTab('Root.Main', TextField::create('Name','Character Name'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Class','Character Class'));
@@ -46,5 +46,5 @@ class Character extends DataObject {
         ->setFolderName('character-images')
         ->getValidator()->setAllowedExtensions(['png', 'jpeg', 'jpg', 'JPG']);
         return $fields;
-    }
+    }*/
 }
