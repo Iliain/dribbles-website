@@ -43,7 +43,7 @@
         <ul>
           <% if Menu(2) %>
             <% if $Parent %>
-              <li><a href="$Parent.Link"><strong>$Parent.Title</strong></a></li>
+              <li><a href="$Parent.Link"><h3><strong>$Parent.Title</strong></h3></a></li>
             <% end_if %>
             <% loop Menu(2) %>
               <li class="<% if $isCurrent %>is-active<% end_if %>"><a href="$Link">$Title</a></li>
