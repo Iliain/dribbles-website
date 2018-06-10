@@ -19,7 +19,7 @@ class Character extends DataObject {
     ];
 
     private static $has_one = [
-        //'ColumnPage'      => ColumnPage::class
+        'ColumnPage'      => ColumnPage::class
         //'CharacterImage'  => Image::class
     ];
 

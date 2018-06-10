@@ -10,7 +10,7 @@ class ColumnPage extends Page
     private static $has_one = [];
 
     private static $has_many = [
-      //'Characters' => Character::class
+      'Characters' => Character::class
     ];
 
     public function getCMSFields() {
