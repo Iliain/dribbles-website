@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        Footer stuff goes here, yo.
+        Created with SilverStripe v4.1.1 and BulmaCSS
       </p>
     </div>
   </div>

@@ -15,9 +15,7 @@
 <body class="">
 <% include Header %>
 <section class="section">
-    <div class="container">
-      $Layout
-    </div>
+    $Layout
 </section>
 <% include Footer %>
 

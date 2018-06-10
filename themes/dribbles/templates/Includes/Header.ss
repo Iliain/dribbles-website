@@ -46,9 +46,11 @@
     <nav class="tabs">
       <div class="container">
         <ul>
-          <% loop Menu(2) %>
-            <li><a href="$Link">$Title</a></li>
-          <% end_loop %>
+          <% if Menu(2) %>
+            <% loop Menu(2) %>
+              <li><a href="$Link">$Title</a></li>
+            <% end_loop %>
+          <% end_if %>
         </ul>
       </div>
     </nav>
