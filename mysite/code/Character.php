@@ -8,7 +8,7 @@ use SilverStripe\Assets\Image;
 
 class Character extends DataObject {
 
-    private static $db = [
+    /*private static $db = [
         'Name'    =>  'Varchar(255)',
         'Class'   =>  'Varchar(255)'
         'Link'    =>  'Varchar(255)',
@@ -18,7 +18,7 @@ class Character extends DataObject {
     private static $has_one = [
         //'ColumnPage'      => ColumnPage::class,
         //'CharacterImage'  => Image::class
-    ];
+    ];*/
 
     /*private static $extensions = [
         Versioned::class,
