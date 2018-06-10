@@ -47,7 +47,7 @@
       <div class="container">
         <ul>
           <% loop Menu(2) %>
-            <li><a>$Title</a></li>
+            <li><a href="$Link">$Title</a></li>
           <% end_loop %>
         </ul>
       </div>
