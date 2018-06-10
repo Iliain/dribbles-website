@@ -7,7 +7,7 @@
         $Form
         $CommentsForm
         <a href="https://dribbles.info/wow/my-guild/">
-          <div class="box" style="background-color:#ffdd57">
+          <div id="guildBox" class="box" style="background-color:#ffdd57">
             <article class="media" style="">
               <div class="media-left">
                 <figure class="image is-64x64">
@@ -57,5 +57,8 @@
 <style>
   .box:hover {
     background-color: #eaeaea;
+  }
+  #guildBox.hover {
+    background-color: #f2d152;
   }
 </style>
