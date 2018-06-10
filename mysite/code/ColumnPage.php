@@ -6,9 +6,4 @@ class ColumnPage extends Page
 
     private static $has_one = [];
 
-    public function getCMSFields() {
-        $fields = parent::getCMSFields();
-
-        return $fields;
-    }
 }
