@@ -15,7 +15,7 @@ class ColumnPage extends Page
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Characters', GridField::create('Characters', 'WoW Characters', $this->Characters(), GridFieldConfig_RecordEditor::create()));
+        //$fields->addFieldToTab('Root.Characters', GridField::create('Characters', 'WoW Characters', $this->Characters(), GridFieldConfig_RecordEditor::create()));
         return $fields;
     }
 }
