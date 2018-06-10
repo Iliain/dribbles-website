@@ -8,6 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   $MetaTags(false)
+  <script type="text/javascript">
+      $('.navbar-burger burger').click(function() {
+        $(this).toggleClass('navbar-burger burger is-active');
+        $('#navbarMenuHeroA').toggleClass('navbar-menu is-active');
+      });
+  </script>
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
