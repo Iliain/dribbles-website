@@ -20,7 +20,7 @@
 <% include Footer %>
 <script type="text/javascript">
     $('#navbar-burger').click(function() {
-      $(this).toggleClass('navbar-burger burger is-active');
+      $(this).toggleClass('is-active');
       $('#navbarMenuHeroA').toggleClass('navbar-menu is-active');
     });
 </script>
