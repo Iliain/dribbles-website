@@ -1,4 +1,4 @@
-<section class="hero is-info">
+<section class="hero is-dark">
   <div class="hero-head">
 		<nav class="navbar">
       <div class="container">
