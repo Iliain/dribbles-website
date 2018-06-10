@@ -7,6 +7,15 @@
         $Form
         $CommentsForm
       </div>
+      <div class="tile is-parent">
+      <article class="tile is-child notification is-warning">
+        <p class="title">Orthodox</p>
+        <p class="subtitle">US-Frostmourne</p>
+        <div class="content">
+          Orthodox is the guild I've been a part of since the release of The Nighthold in Legion.
+        </div>
+      </article>
+    </div>
     </div>
     <div class="column">
       <h1 class="title">My Characters</h1>
