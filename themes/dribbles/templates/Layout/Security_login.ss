@@ -22,8 +22,8 @@ input[type="text"]
   border-color: #dbdbdb;
   color: #363636;
   box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
-  max-width: 100%;
-  width: 100%;
+  max-width: 50%;
+  width: 50%;
   -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
@@ -46,8 +46,8 @@ input[type="password"]
   border-color: #dbdbdb;
   color: #363636;
   box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
-  max-width: 100%;
-  width: 100%;
+  max-width: 50%;
+  width: 50%;
   -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
