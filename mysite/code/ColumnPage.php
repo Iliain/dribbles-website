@@ -10,7 +10,7 @@ class ColumnPage extends Page
     private static $has_one = [];
 
     private static $has_many = [
-      'Characters' => Character::class
+      //'Characters' => Character::class
     ];
 
     public function getCMSFields() {
@@ -18,5 +18,4 @@ class ColumnPage extends Page
         $fields->addFieldToTab('Root.Characters', GridField::create('Characters', 'WoW Characters', $this->Characters(), GridFieldConfig_RecordEditor::create()));
         return $fields;
     }
-
 }
