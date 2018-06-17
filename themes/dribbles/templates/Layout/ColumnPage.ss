@@ -34,7 +34,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  $CharacterImage
+                  <img src="$CharacterImage.URL" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
