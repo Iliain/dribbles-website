@@ -34,7 +34,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-64x64">
-                  <img src="$CharacterImage.ScaleWidth(64)" alt="Image">
+                  $CharacterImage
                 </figure>
               </div>
               <div class="media-content">
