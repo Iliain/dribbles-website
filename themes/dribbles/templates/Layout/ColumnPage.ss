@@ -10,7 +10,7 @@
           <div class="box" style="margin-bottom: 10px">
             <article class="media">
               <div class="media-left">
-                <figure class="image is-96x96">
+                <figure class="image is-128x128">
                   <img src="/assets/Uploads/cb737d8b60/guild-icon.png" alt="Image">
                 </figure>
               </div>
