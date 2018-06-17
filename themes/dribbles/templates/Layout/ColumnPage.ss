@@ -11,7 +11,7 @@
             <article class="media">
               <div class="media-left">
                 <figure class="image is-96x96">
-                  <img src="/assets/guild-icon.jpg" alt="Image">
+                  <img src="https://dribbles.info/assets/guild-icon.jpg" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
