@@ -26,6 +26,10 @@ class Character extends DataObject {
         'CharacterImage'  => Image::class
     ];
 
+    private static $owns = [
+        'CharacterImage',
+    ];
+
     /*private static $extensions = [
         Versioned::class,
     ];
