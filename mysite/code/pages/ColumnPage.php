@@ -15,6 +15,10 @@ class ColumnPage extends Page
       'Character' => Character::class
     ];
 
+    private static $owns = [
+        'Character',
+    ];
+
     public function getCMSFields() {
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Characters', GridField::create(
