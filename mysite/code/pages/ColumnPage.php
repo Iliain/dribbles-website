@@ -4,10 +4,13 @@ use SilverStripe\DataObject\Character;
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
 class ColumnPage extends Page
 {
-    private static $db = [];
+    private static $db = [
+        'Header Content' => 'HTMLText'
+    ];
 
     private static $has_one = [];
 
@@ -21,6 +24,7 @@ class ColumnPage extends Page
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('Character','Character'), 'Content');
         $fields->addFieldToTab('Root.Characters', GridField::create(
           'Character',
           'Character',
