@@ -9,7 +9,6 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class GuildElement extends BaseElement
 {
     private static $db = [
-        'Title'    =>  'Text',
         'Link'    =>  'Text',
         'Content' =>  'HTMLText'
     ];
@@ -32,7 +31,6 @@ class GuildElement extends BaseElement
       {
           $fields = parent::getCMSFields();
 
-          $fields->addFieldtoTab('Root.Main', TextField::create('Title','Title'));
           $fields->addFieldtoTab('Root.Main', TextField::create('Link','Link'));
           $fields->addFieldtoTab('Root.Main', HTMLEditorField::create('Content','Content'));
 
