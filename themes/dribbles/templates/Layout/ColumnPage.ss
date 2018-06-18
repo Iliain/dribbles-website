@@ -3,7 +3,6 @@
     <div class="column is-two-thirds">
       <h1 class="title">$MenuTitle</h1>
       <div class="content">
-        $HeaderContent
         <a href="https://dribbles.info/wow/orthodox/">
           <div class="box" style="margin-bottom: 10px">
             <article class="media">
