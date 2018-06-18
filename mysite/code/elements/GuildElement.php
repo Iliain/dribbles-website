@@ -1,5 +1,7 @@
 <?php
 
+namespace Elemental\Custom;
+
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
