@@ -1,12 +1,12 @@
 <?php
 
-use SilverStripe\DataObject\Character;
+use SilverStripe\DataObject\Guild;
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-class ColumnPage extends Page
+class HistoryPage extends Page
 {
     private static $db = [
         'HeaderContent' => 'HTMLText'
@@ -15,21 +15,21 @@ class ColumnPage extends Page
     private static $has_one = [];
 
     private static $has_many = [
-      'Character' => Character::class
+        'Guilds' => Guild::class
     ];
 
     private static $owns = [
-        'Character',
+        'Guild',
     ];
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('HeaderContent','Header Content'), 'Content');
-        $fields->addFieldToTab('Root.Characters', GridField::create(
-          'Character',
-          'Character',
-          $this->Character(),
-          GridFieldConfig_RecordEditor::create()
+
+        $fields->addFieldToTab('Root.Guilds', GridField::create(
+            'Guilds',
+            'Guilds',
+            $this->Guilds(),
+            GridFieldConfig_RecordEditor::create()
         ));
         return $fields;
     }

@@ -3,27 +3,28 @@
     <div class="column is-two-thirds">
       <h1 class="title">$MenuTitle</h1>
       <div class="content">
-        $Content
-        $Form
-        $CommentsForm
+        $HeaderContent
         <a href="https://dribbles.info/wow/orthodox/">
           <div class="box" style="margin-bottom: 10px">
             <article class="media">
-              <div class="media-left">
-                <figure class="image is-128x128">
-                  <img src="/assets/Uploads/cb737d8b60/guild-icon.png" alt="Image">
-                </figure>
-              </div>
               <div class="media-content">
-                <p class="title">Orthodox</p>
-                <p class="subtitle">US-Frostmourne</p>
                 <div class="content">
+                    <strong>Orthodox</strong></br>
+                    <small>US - Frostmourne</small></br>
                   Orthodox is the guild I've been a part of since the release of The Nighthold in Legion.
                 </div>
               </div>
+              <div class="media-left">
+                  <figure class="image is-96x96">
+                      <img src="/assets/Uploads/cb737d8b60/guild-icon.png" alt="Image">
+                  </figure>
+                </div>
             </article>
           </div>
         </a>
+        $ElementalArea
+        $Form
+        $CommentsForm
       </div>
     </div>
     <div class="column">
