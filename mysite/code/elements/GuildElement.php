@@ -21,6 +21,8 @@ class GuildElement extends BaseElement
         'GuildImage',
     ];
 
+    private static $controller_template = 'GuildElement';
+
     private static $singular_name = 'Guild Element';
 
     private static $plural_name = 'Guild Elements';
