@@ -9,7 +9,6 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class ColumnPage extends Page
 {
     private static $db = [
-        'HeaderContent' => 'HTMLText'
     ];
 
     private static $has_one = [];
@@ -24,7 +23,6 @@ class ColumnPage extends Page
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('HeaderContent','Header Content'), 'Content');
         $fields->addFieldToTab('Root.Characters', GridField::create(
           'Character',
           'Character',
