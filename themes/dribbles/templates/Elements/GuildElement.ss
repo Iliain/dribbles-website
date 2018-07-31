@@ -13,6 +13,7 @@
           <p>
             $Content
           </p>
+          </br>
         </div>
       </div>
     </article>

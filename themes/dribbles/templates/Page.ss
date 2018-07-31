@@ -15,17 +15,18 @@
   <![endif]-->
 </head>
 <body class="">
-<% include Header %>
-<section class="section">
+$BetterNavigator
+  <% include Header %>
+  <section class="section">
     $Layout
-</section>
-<% include Footer %>
-<script type="text/javascript">
-    $('#navbar-burger').click(function() {
-      $(this).toggleClass('is-active');
-      $('#navbarMenuHeroA').toggleClass('navbar-menu is-active');
-    });
-</script>
+  </section>
+  <% include Footer %>
+  <script type="text/javascript">
+      $('#navbar-burger').click(function() {
+        $(this).toggleClass('is-active');
+        $('#navbarMenuHeroA').toggleClass('navbar-menu is-active');
+      });
+  </script>
 
 </body>
 </html>

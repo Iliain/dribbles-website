@@ -1,5 +1,5 @@
-<section class="hero is-dark">
-  <div class="hero-head">
+<section class="hero <% if $BackgroundColor %>$BackgroundColor<% else %>is-dark<% end_if %>">
+      <div class="hero-head">
 		<nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
@@ -17,7 +17,7 @@
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
 						<% loop Menu(1) %>
-							<a href="$Link" class="navbar-item <% if $isCurrent %>is-active<% end_if %>">
+							<a href="$Link" class="navbar-item <% if $isCurrent %>is-active" style="<% end_if %> ">
 								$Title
 							</a>
 						<% end_loop %>
