@@ -11,7 +11,6 @@ use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class WowHomePage extends Page
 {
     private static $db = [
-        'HeaderContent' => 'HTMLText'
     ];
 
     private static $has_one = [];
@@ -28,7 +27,6 @@ class WowHomePage extends Page
         $gridConfig = GridFieldConfig_RecordEditor::create()->addComponent(new GridFieldSortableRows('Sort'));
 
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('HeaderContent','Header Content'), 'Content');
         $fields->addFieldToTab('Root.Characters', GridField::create(
           'Character',
           'Character',
