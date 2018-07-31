@@ -3,7 +3,7 @@
 use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
 
-class ColumnPageController extends PageController
+class WowPageController extends PageController
 {
     /**
      * An array of actions that can be accessed via a request. Each array element should be an action name, and the
