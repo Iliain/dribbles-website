@@ -6,7 +6,9 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-class ColumnPage extends Page
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
+
+class WowHomePage extends Page
 {
     private static $db = [
         'HeaderContent' => 'HTMLText'
@@ -23,14 +25,18 @@ class ColumnPage extends Page
     ];
 
     public function getCMSFields() {
+        $gridConfig = GridFieldConfig_RecordEditor::create()->addComponent(new GridFieldSortableRows('Sort'));
+
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Main', HTMLEditorField::create('HeaderContent','Header Content'), 'Content');
         $fields->addFieldToTab('Root.Characters', GridField::create(
           'Character',
           'Character',
           $this->Character(),
-          GridFieldConfig_RecordEditor::create()
+          $gridConfig
         ));
+
+
         return $fields;
     }
 }
