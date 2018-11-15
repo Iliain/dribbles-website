@@ -2,7 +2,9 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        Created with SilverStripe v4.1.1 and BulmaCSS
+        <% with $SiteConfig %>
+          $FooterText
+        <% end_with %>
       </p>
     </div>
   </div>
