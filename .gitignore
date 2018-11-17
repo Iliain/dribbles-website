@@ -3,6 +3,7 @@
 
 ##### ... except:
 !/.htaccess
+!/.gitignore
 !/composer.json
 !/composer.lock
 !/index.php
@@ -11,7 +12,7 @@
 
 ##### Themes
 !/themes/
-/themes/simple
+/themes/dribbles
 
 ##### Core
 !/mysite
