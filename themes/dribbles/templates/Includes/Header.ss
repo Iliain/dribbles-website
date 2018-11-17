@@ -1,10 +1,12 @@
 <section class="hero <% if $BackgroundColor %>$BackgroundColor<% else %>is-dark<% end_if %>">
-      <div class="hero-head">
+  <div class="hero-head">
 		<nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <a href="$BaseHref" class="navbar-item">
-            <img src="$ThemeDir/assets/logo.png" alt="Logo">
+            <% with $SiteConfig %>
+                <img src="$SiteLogo.URL" alt="Logo">
+            <% end_with %>
           </a>
           <span id="navbar-burger" class="navbar-burger burger" data-target="navbarMenuHeroA">
 						<% loop Menu(1) %>
