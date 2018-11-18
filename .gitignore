@@ -1,5 +1,7 @@
 ##### Ignore everything...
 /*
+vendor
+vendor/
 
 ##### ... except:
 !/.htaccess
@@ -12,7 +14,7 @@
 
 ##### Themes
 !/themes/
-/themes/dribbles
+!/themes/dribbles
 
 ##### Core
 !/mysite

@@ -11,7 +11,7 @@
         <% end_if %>
         <div class="column">
           <a href="$Link">
-            <div class="box has-text-centered">
+            <div class="box has-text-centered" style="padding-top: 25%;">
               <h2 class="title is-2">$Title</h2>
             </div>
           </a>
