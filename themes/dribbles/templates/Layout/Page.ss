@@ -3,6 +3,5 @@
   <div class="content">
     $ElementalArea
     $Form
-    $CommentsForm
   </div>
 </div>

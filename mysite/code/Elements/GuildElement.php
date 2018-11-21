@@ -1,6 +1,6 @@
 <?php
 
-namespace DNADesign\Elemental\Model;
+namespace Dribbles\Website\Elements;
 
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\ORM\DataObject;
