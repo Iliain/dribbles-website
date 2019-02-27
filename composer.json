@@ -3,7 +3,7 @@
     "type": "silverstripe-recipe",
     "description": "Dribbles Website Installer",
     "require": {
-        "php": ">=5.6.0",
+        "php": ">7",
         "silverstripe/recipe-plugin": "^1",
         "silverstripe/recipe-cms": "4.3",
         "silverstripe/userforms": "dev-master",
@@ -31,7 +31,7 @@
     },
     "extra": {
         "project-files": [
-            "mysite/_config/*",
+            "app/_config/*",
             ".env.example"
         ],
         "expose": [
@@ -44,7 +44,7 @@
             "favicon.ico"
         ],
         "branch-alias": {
-            "4.x-dev": "4.2.x-dev",
+            "4.x-dev": "4.3.x-dev",
             "dev-master": "5.x-dev"
         },
         "project-files-installed": [
