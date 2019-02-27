@@ -15,7 +15,6 @@
         <% else_if $CurrentCategory %>
             <%t SilverStripe\\Blog\\Model\\Blog.Category 'Category' %>: $CurrentCategory.Title
         <% else %>
-            <h1 class="title is-1">$Title</h1>
         <% end_if %>
     </h1>
 

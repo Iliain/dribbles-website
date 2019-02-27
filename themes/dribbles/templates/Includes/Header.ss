@@ -10,14 +10,14 @@
             <% end_if %>
 
             <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
-                <h1 class="title">$Parent.MenuTitle</h1>
+                <h1 class="title is-1">$Parent.MenuTitle</h1>
                 <% if $SubTitle %>
                     <h2 class="subtitle">
                         $SubTitle
                     </h2>
                 <% end_if %>
             <% else %>
-                <h1 class="title">$MenuTitle</h1>
+                <h1 class="title is-1">$MenuTitle</h1>
                 <% if $Parent.SubTitle %>
                     <h2 class="subtitle">
                         $Parent.SubTitle
