@@ -6,7 +6,7 @@ Name: mysite
 # Caution: Indentation through two spaces, not tabs
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - Dribbles\Site\Extensions\SiteConfigExtension
+    - SiteConfigExtension
 
 UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
     site_key: "6Lc6NV4UAAAAAMK8pwT1nCHTIYAbPC2h1dCjFCrq" #Your site key (required)
