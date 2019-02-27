@@ -1,5 +1,7 @@
 <% if $Level(2) %>
-	<div id="Breadcrumbs">
-	   	$Breadcrumbs
-	</div>
+    <nav class="breadcrumb has-bullet-separator is-centered" aria-label="breadcrumbs">
+        <ul>
+			$Breadcrumbs
+        </ul>
+    </nav>
 <% end_if %>

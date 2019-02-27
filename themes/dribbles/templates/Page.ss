@@ -14,19 +14,25 @@
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body class="">
-$BetterNavigator
+<body class="has-navbar-fixed-top">
+  <% include Navigation %>
   <% include Header %>
   <section class="section">
     $Layout
   </section>
   <% include Footer %>
   <script type="text/javascript">
-      $('#navbar-burger').click(function() {
-        $(this).toggleClass('is-active');
-        $('#navbarMenuHeroA').toggleClass('navbar-menu is-active');
+      $(document).ready(function() {
+
+          // Check for click events on the navbar burger icon
+          $(".navbar-burger").click(function() {
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              $(".navbar-burger").toggleClass("is-active");
+              $(".navbar-menu").toggleClass("is-active");
+
+          });
       });
   </script>
-
 </body>
 </html>

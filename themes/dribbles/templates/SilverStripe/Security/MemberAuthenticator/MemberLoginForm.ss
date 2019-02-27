@@ -37,7 +37,8 @@
         </div>
     </div>
 <% end_if %>
-<br>
+</br>
+
 <% loop $Actions %>
     <div class="field is-grouped is-grouped-centered">
         <div class="control">
