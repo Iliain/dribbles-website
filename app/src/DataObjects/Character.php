@@ -13,6 +13,8 @@ class Character extends DataObject
 {
     private static $default_sort = "Sort ASC";
 
+    private static $table_name = "WoWCharacter";
+
     private static $db = [
         'Sort'              => 'Int',
         'Name'              => 'Text',
