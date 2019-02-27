@@ -21,7 +21,7 @@
     <div class="content">$Content</div>
 
     <div class="columns">
-        <div class="column is-half">
+        <div class="column is-two-thirds">
             <% if $PaginatedList.Exists %>
                 <% loop $PaginatedList %>
                     <% include SilverStripe\\Blog\\PostSummary %>
