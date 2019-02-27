@@ -9,7 +9,7 @@
                 </div>
             <% end_if %>
 
-            <% if $ClassName == "SilverStripe\Blog\Model\Blog" %>
+            <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
                 <h1 class="title">$Parent.MenuTitle</h1>
                 <% if $SubTitle %>
                     <h2 class="subtitle">
