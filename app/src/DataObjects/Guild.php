@@ -1,7 +1,5 @@
 <?php
 
-use HistoryPage;
-
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
