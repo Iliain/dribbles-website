@@ -1,8 +1,5 @@
 <?php
 
-
-namespace Dribbles\Site\Extensions;
-
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\TextField;
@@ -14,11 +11,11 @@ use SilverStripe\Versioned\Versioned;
 class SiteConfigExtension extends DataExtension
 {
     private static $db = [
-        'FooterText'           => 'Varchar(255)',
+        'FooterText'    => 'Varchar(255)',
     ];
 
     private static $has_one = [
-        'SiteLogo'            => Image::class,
+        'SiteLogo'      => Image::class,
     ];
 
     private static $owns = [

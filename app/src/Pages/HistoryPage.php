@@ -1,7 +1,5 @@
 <?php
 
-use SilverStripe\DataObject\Guild;
-
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;

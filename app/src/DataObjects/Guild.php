@@ -1,7 +1,5 @@
 <?php
 
-namespace SilverStripe\DataObject;
-
 use HistoryPage;
 
 use SilverStripe\ORM\DataObject;

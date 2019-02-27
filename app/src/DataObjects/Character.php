@@ -1,15 +1,11 @@
 <?php
 
-namespace SilverStripe\DataObject;
-
-use WowHomePage;
-
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Versioned\Versioned;
 
-class Character extends DataObject
+class WoWCharacter extends DataObject
 {
     private static $default_sort = "Sort ASC";
 
@@ -26,7 +22,7 @@ class Character extends DataObject
     ];
 
     private static $has_one = [
-        'ColumnPage'        => WowHomePage::class,
+        'ColumnPage'        => WoWHomePage::class,
 //        'CharacterImage'    => Image::class
     ];
 

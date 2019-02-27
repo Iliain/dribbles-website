@@ -1,14 +1,11 @@
 <?php
 
-use SilverStripe\DataObject\Character;
-
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
-use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
-
-class WowHomePage extends Page
+class WoWHomePage extends Page
 {
     private static $db = [
     ];
@@ -16,15 +13,16 @@ class WowHomePage extends Page
     private static $has_one = [];
 
     private static $has_many = [
-      'Character' => Character::class
+      'Character' => WoWCharacter::class
     ];
 
     private static $owns = [
         'Character',
     ];
 
-    public function getCMSFields() {
-        $gridConfig = GridFieldConfig_RecordEditor::create()->addComponent(new GridFieldSortableRows('Sort'));
+    public function getCMSFields()
+    {
+        $gridConfig = GridFieldConfig_RecordEditor::create()->addComponent(new GridFieldOrderableRows());
 
         $fields = parent::getCMSFields();
         $fields->addFieldToTab('Root.Characters', GridField::create(
@@ -33,7 +31,6 @@ class WowHomePage extends Page
           $this->Character(),
           $gridConfig
         ));
-
 
         return $fields;
     }
