@@ -8,12 +8,23 @@
                     $SearchForm
                 </div>
             <% end_if %>
-            <h1 class="title">$MenuTitle</h1>
-            <% if $SubTitle %>
-                <h2 class="subtitle">
-                    $SubTitle
-                </h2>
+
+            <% if $ClassName == "SilverStripe\Blog\Model\Blog" %>
+                <h1 class="title">$Parent.MenuTitle</h1>
+                <% if $SubTitle %>
+                    <h2 class="subtitle">
+                        $SubTitle
+                    </h2>
+                <% end_if %>
+            <% else %>
+                <h1 class="title">$MenuTitle</h1>
+                <% if $Parent.SubTitle %>
+                    <h2 class="subtitle">
+                        $Parent.SubTitle
+                    </h2>
+                <% end_if %>
             <% end_if %>
+
         </div>
     </div>
     <div class="hero-foot">

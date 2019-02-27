@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ad276572d500fb45d47ad569b7ea522",
+    "content-hash": "01b3f2b58579805dda4d88e6e6eec130",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
