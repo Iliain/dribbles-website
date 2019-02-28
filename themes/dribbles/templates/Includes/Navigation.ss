@@ -15,15 +15,11 @@
 			<% loop $Menu(1) %>
 				<% if $Children %>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link" href="$Link">
                             $MenuTitle
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="$Link">
-                                $MenuTitle
-                            </a>
-                            <hr class="navbar-divider">
 							<% loop $Children %>
                                 <a class="navbar-item" href="$Link">
                                     $MenuTitle
