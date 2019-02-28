@@ -4,9 +4,6 @@ Name: mysite
 # YAML configuration for SilverStripe
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
-SilverStripe\SiteConfig\SiteConfig:
-  extensions:
-    - SiteConfigExtension
 
 UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
     site_key: "6Lc6NV4UAAAAAMK8pwT1nCHTIYAbPC2h1dCjFCrq" #Your site key (required)
@@ -18,6 +15,3 @@ UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
     default_badge: "bottomright" #Default badge position (bottomright, bottomleft or inline, defaults to bottomright)
     proxy_server: "" #Your proxy server address (optional)
     proxy_auth: "" #Your proxy server authentication information (optional)
-UserForm:
-  extensions:
-    - MyFormDecorator

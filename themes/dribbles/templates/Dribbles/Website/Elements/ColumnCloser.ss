@@ -1,0 +1,2 @@
+</div>
+<!-- Close Column Section -->

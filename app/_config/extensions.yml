@@ -1,0 +1,15 @@
+---
+Name: extensions
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SiteConfigExtension
+UserForm:
+  extensions:
+    - MyFormDecorator
+SilverStripe\ORM\DataObject:
+  extensions:
+    - DataObjectExtension
+DNADesign\Elemental\Models\BaseElement:
+  extensions:
+    - ElementClassExtension
