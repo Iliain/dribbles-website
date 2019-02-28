@@ -31,9 +31,15 @@ class PageController extends ContentController
 
         $this->ThemeDir = 'themes/dribbles/';
 
+        // CSS
         Requirements::css($this->ThemeDir . "css/bulma.css");
+
+        // JS
         Requirements::javascript("//code.jquery.com/jquery-1.7.2.min.js");
         Requirements::javascript("https://use.fontawesome.com/releases/v5.0.7/js/all.js");
 
+        // Slick
+        Requirements::css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+        Requirements::javascript('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
     }
 }

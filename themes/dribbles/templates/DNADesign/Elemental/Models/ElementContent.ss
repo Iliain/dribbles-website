@@ -1,4 +1,4 @@
-<% if $CustomClass %><div class="$CustomClass"><% end_if %>
+<% if $ExtraClass %><div class="$ExtraClass"><% end_if %>
 
     <div class="content">
         <% if $ShowTitle %>
@@ -7,4 +7,4 @@
         $HTML
     </div>
 
-<% if $CustomClass %></div><% end_if %>
+<% if $ExtraClass %></div><% end_if %>

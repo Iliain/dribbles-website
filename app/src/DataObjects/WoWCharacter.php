@@ -4,6 +4,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Versioned\Versioned;
+use Dribbles\Website\Elements\CharacterCarousel;
 
 class WoWCharacter extends DataObject
 {
@@ -24,6 +25,10 @@ class WoWCharacter extends DataObject
     private static $has_one = [
         'ColumnPage'        => WoWHomePage::class,
 //        'CharacterImage'    => Image::class
+    ];
+
+    private static $belongs_many_many = [
+        'Carousel'          => CharacterCarousel::class
     ];
 
     private static $owns = [

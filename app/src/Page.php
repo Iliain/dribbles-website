@@ -2,11 +2,13 @@
 
 use SilverStripe\CMS\Model\SiteTree;
 use Heyday\ColorPalette\Fields\GroupedColorPaletteField;
+use SilverStripe\Forms\TextField;
 
 class Page extends SiteTree
 {
     private static $db = [
-        'BackgroundColor' => 'Varchar'
+        'BackgroundColor'   => 'Varchar',
+        'SubTitle'          => 'Varchar(255)'
     ];
 
     private static $has_one = [];
@@ -14,7 +16,9 @@ class Page extends SiteTree
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Main',
+        $fields->addFieldToTab('Root.Main', TextField::create('SubTitle', 'Subtitle'), 'ElementalArea');
+
+        $fields->addFieldsToTab('Root.Main', [
             GroupedColorPaletteField::create(
                 'BackgroundColor',
                 'Background Color',
@@ -30,7 +34,7 @@ class Page extends SiteTree
                     ]
                 ]
             )
-        );
+        ]);
 
         return $fields;
     }

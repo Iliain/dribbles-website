@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01b3f2b58579805dda4d88e6e6eec130",
+    "content-hash": "b0617cd446eafd394f77e02584fce46c",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -243,16 +243,16 @@
         },
         {
             "name": "dnadesign/silverstripe-elemental",
-            "version": "4.0.2",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental.git",
-                "reference": "63410a49dfaa90729628de6ea457b809e9a2fdc4"
+                "reference": "64b231870e35bc8ce2b3762cd9ee5de48b63687d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/63410a49dfaa90729628de6ea457b809e9a2fdc4",
-                "reference": "63410a49dfaa90729628de6ea457b809e9a2fdc4",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental/zipball/64b231870e35bc8ce2b3762cd9ee5de48b63687d",
+                "reference": "64b231870e35bc8ce2b3762cd9ee5de48b63687d",
                 "shasum": ""
             },
             "require": {
@@ -262,7 +262,8 @@
                 "symbiote/silverstripe-gridfieldextensions": "^3.1"
             },
             "require-dev": {
-                "silverstripe/recipe-testing": "1.x-dev"
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
             },
             "suggest": {
                 "dnadesign/silverstripe-elemental-subsites": "Adds subsite support to elemental",
@@ -274,8 +275,7 @@
             "type": "silverstripe-vendormodule",
             "extra": {
                 "expose": [
-                    "client/dist",
-                    "client/lang"
+                    "client/dist"
                 ]
             },
             "autoload": {
@@ -301,24 +301,24 @@
                 "elemental",
                 "silverstripe"
             ],
-            "time": "2019-01-30T23:05:35+00:00"
+            "time": "2019-01-29T11:37:48+00:00"
         },
         {
             "name": "dnadesign/silverstripe-elemental-userforms",
-            "version": "3.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dnadesign/silverstripe-elemental-userforms.git",
-                "reference": "b635fa17be810273c773fd4b58f85ae39ea79f68"
+                "reference": "5a01ef76410a9cb216058ab7c8edd331e2a224d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental-userforms/zipball/b635fa17be810273c773fd4b58f85ae39ea79f68",
-                "reference": "b635fa17be810273c773fd4b58f85ae39ea79f68",
+                "url": "https://api.github.com/repos/dnadesign/silverstripe-elemental-userforms/zipball/5a01ef76410a9cb216058ab7c8edd331e2a224d6",
+                "reference": "5a01ef76410a9cb216058ab7c8edd331e2a224d6",
                 "shasum": ""
             },
             "require": {
-                "dnadesign/silverstripe-elemental": "^4.0@dev",
+                "dnadesign/silverstripe-elemental": "^3.0",
                 "silverstripe/userforms": "^5.0",
                 "silverstripe/vendor-plugin": "^1.0"
             },
@@ -351,24 +351,23 @@
                 "silverstripe",
                 "userforms"
             ],
-            "time": "2018-11-07T12:02:57+00:00"
+            "time": "2018-07-12T04:08:24+00:00"
         },
         {
             "name": "dynamic/flexslider",
-            "version": "4.0.0-beta3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dynamic/silverstripe-flexslider.git",
-                "reference": "2979dcb8e146a7f628e81e5e81c3aedba75da0e3"
+                "reference": "b89b5e402b2a9e071175090c620c289be714439a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dynamic/silverstripe-flexslider/zipball/2979dcb8e146a7f628e81e5e81c3aedba75da0e3",
-                "reference": "2979dcb8e146a7f628e81e5e81c3aedba75da0e3",
+                "url": "https://api.github.com/repos/dynamic/silverstripe-flexslider/zipball/b89b5e402b2a9e071175090c620c289be714439a",
+                "reference": "b89b5e402b2a9e071175090c620c289be714439a",
                 "shasum": ""
             },
             "require": {
-                "sheadawson/silverstripe-linkable": "^2.0",
                 "silverstripe/asset-admin": "^1.0",
                 "silverstripe/recipe-cms": "^1.0 || ^4.0",
                 "silverstripe/vendor-plugin": "^1.0",
@@ -386,7 +385,7 @@
                     "thirdparty"
                 ],
                 "branch-alias": {
-                    "dev-master": "4.0.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -415,26 +414,28 @@
                 "slider",
                 "slideshow"
             ],
-            "time": "2019-02-05T21:24:06+00:00"
+            "time": "2019-01-09T17:15:14+00:00"
         },
         {
             "name": "dynamic/silverstripe-elemental-blog",
-            "version": "2.1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dynamic/silverstripe-elemental-blog.git",
-                "reference": "784d5e881394c8b79821ecaacfb872e314c8e727"
+                "reference": "d8dbb92ec8476ac9fd5f0cc993821dc1565cae0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-blog/zipball/784d5e881394c8b79821ecaacfb872e314c8e727",
-                "reference": "784d5e881394c8b79821ecaacfb872e314c8e727",
+                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-blog/zipball/d8dbb92ec8476ac9fd5f0cc993821dc1565cae0d",
+                "reference": "d8dbb92ec8476ac9fd5f0cc993821dc1565cae0d",
                 "shasum": ""
             },
             "require": {
-                "dnadesign/silverstripe-elemental": "^4@dev",
+                "dnadesign/silverstripe-elemental": "^2@dev || ^3@dev",
                 "sheadawson/silverstripe-dependentdropdownfield": "^2@dev",
-                "silverstripe/blog": "^3@dev"
+                "silverstripe/blog": "^3@dev",
+                "silverstripe/recipe-cms": "^1@dev || ^4@dev",
+                "silverstripe/vendor-plugin": "^1@dev"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.7",
@@ -443,7 +444,7 @@
             "type": "silverstripe-vendormodule",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -463,32 +464,31 @@
                     "homepage": "http://www.dynamicagency.com"
                 }
             ],
-            "description": "Show recent blog posts from a featured blog.",
+            "description": "A blog element for the SilverStripe Elemental module",
             "keywords": [
                 "block",
                 "blog",
                 "element",
                 "silverstripe"
             ],
-            "time": "2019-02-14T02:37:26+00:00"
+            "time": "2018-08-28T16:31:38+00:00"
         },
         {
             "name": "dynamic/silverstripe-elemental-countdown",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dynamic/silverstripe-elemental-countdown.git",
-                "reference": "f8d0878edce67c3863f22ef0de9206bf1601c8a9"
+                "reference": "370128b2fbc4eb2d60f3e6fa807b85026e2568ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-countdown/zipball/f8d0878edce67c3863f22ef0de9206bf1601c8a9",
-                "reference": "f8d0878edce67c3863f22ef0de9206bf1601c8a9",
+                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-countdown/zipball/370128b2fbc4eb2d60f3e6fa807b85026e2568ef",
+                "reference": "370128b2fbc4eb2d60f3e6fa807b85026e2568ef",
                 "shasum": ""
             },
             "require": {
-                "dnadesign/silverstripe-elemental": "^4@dev",
-                "silverstripe/recipe-cms": "^4@dev",
+                "dnadesign/silverstripe-elemental": "^2@dev || ^3@dev",
                 "silverstripe/vendor-plugin": "^1@dev"
             },
             "require-dev": {
@@ -501,10 +501,7 @@
                     "thirdparty",
                     "icons",
                     "client/dist"
-                ],
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
+                ]
             },
             "autoload": {
                 "psr-4": {
@@ -523,32 +520,32 @@
                     "homepage": "http://www.dynamicagency.com"
                 }
             ],
-            "description": "Display a countdown to a specific date and time",
+            "description": "Countdown element for the SilverStripe Elemental module",
             "keywords": [
                 "blocks",
                 "elemental",
                 "silverstripe"
             ],
-            "time": "2019-01-19T23:12:48+00:00"
+            "time": "2019-01-17T20:31:17+00:00"
         },
         {
             "name": "dynamic/silverstripe-elemental-flexslider",
-            "version": "dev-master",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dynamic/silverstripe-elemental-flexslider.git",
-                "reference": "61eb205c35a7e251b834c7d2c23347ab0641ca3a"
+                "reference": "22e8bc89a1a044a159238835d7c2777298745681"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-flexslider/zipball/61eb205c35a7e251b834c7d2c23347ab0641ca3a",
-                "reference": "61eb205c35a7e251b834c7d2c23347ab0641ca3a",
+                "url": "https://api.github.com/repos/dynamic/silverstripe-elemental-flexslider/zipball/22e8bc89a1a044a159238835d7c2777298745681",
+                "reference": "22e8bc89a1a044a159238835d7c2777298745681",
                 "shasum": ""
             },
             "require": {
-                "dnadesign/silverstripe-elemental": "^4@dev",
-                "dynamic/flexslider": "^4@dev",
-                "silverstripe/recipe-cms": "^4@dev",
+                "dnadesign/silverstripe-elemental": "^2@dev || ^3@dev",
+                "dynamic/flexslider": "^3@dev",
+                "silverstripe/recipe-cms": "^1@dev || ^4@dev",
                 "silverstripe/vendor-plugin": "^1@dev"
             },
             "require-dev": {
@@ -556,11 +553,6 @@
                 "squizlabs/php_codesniffer": "*"
             },
             "type": "silverstripe-vendormodule",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Dynamic\\Elements\\Flexslider\\": "src/",
@@ -585,7 +577,7 @@
                 "elemental",
                 "silverstripe"
             ],
-            "time": "2019-01-19T22:28:33+00:00"
+            "time": "2019-01-18T22:59:06+00:00"
         },
         {
             "name": "embed/embed",
@@ -1627,71 +1619,6 @@
                 "silverstripe"
             ],
             "time": "2018-02-16T02:32:11+00:00"
-        },
-        {
-            "name": "sheadawson/silverstripe-linkable",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sheadawson/silverstripe-linkable.git",
-                "reference": "b447a8b8c48db0fc685ce3cc003c91c9e3ae51ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sheadawson/silverstripe-linkable/zipball/b447a8b8c48db0fc685ce3cc003c91c9e3ae51ea",
-                "reference": "b447a8b8c48db0fc685ce3cc003c91c9e3ae51ea",
-                "shasum": ""
-            },
-            "require": {
-                "embed/embed": "^3.0",
-                "silverstripe/framework": "^4.0",
-                "silverstripe/vendor-plugin": "^1.0",
-                "unclecheese/display-logic": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7"
-            },
-            "suggest": {
-                "silverstripe/cms": "To allow for a linking of the SiteTree data object."
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "installer-name": "linkable",
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                },
-                "expose": [
-                    "client"
-                ]
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sheadawson\\Linkable\\": "src/",
-                    "Sheadawson\\Linkable\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Marcus Nyeholt",
-                    "email": "marcus@silverstripe.com.au"
-                },
-                {
-                    "name": "Shea Dawson",
-                    "email": "shea@silverstripe.com.au"
-                }
-            ],
-            "description": "A couple of handy form fields and objects for managing external and internal links on DataObjects",
-            "homepage": "http://github.com/sheadawson/silverstripe-linkable",
-            "keywords": [
-                "cms",
-                "link",
-                "silverstripe"
-            ],
-            "time": "2018-06-07T07:05:33+00:00"
         },
         {
             "name": "silverstripe/admin",
@@ -3680,66 +3607,6 @@
             "time": "2019-01-16T10:59:17+00:00"
         },
         {
-            "name": "unclecheese/display-logic",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unclecheese/silverstripe-display-logic.git",
-                "reference": "845ab12189439422b6dcd1becd20c9d5a94eb558"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/845ab12189439422b6dcd1becd20c9d5a94eb558",
-                "reference": "845ab12189439422b6dcd1becd20c9d5a94eb558",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": "^4.0"
-            },
-            "replace": {
-                "silverstripe/display-logic": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7",
-                "se/selenium-server-standalone": "2.41.0",
-                "silverstripe/behat-extension": "^3@dev",
-                "silverstripe/serve": "^2"
-            },
-            "type": "silverstripe-vendormodule",
-            "extra": {
-                "installer-name": "display-logic",
-                "expose": [
-                    "client"
-                ]
-            },
-            "autoload": {
-                "psr-4": {
-                    "UncleCheese\\DisplayLogic\\": "src/",
-                    "UncleCheese\\DisplayLogic\\Tests\\": "tests/php/",
-                    "UncleCheese\\DisplayLogic\\Tests\\Behaviour\\": "tests/behat/src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Uncle Cheese",
-                    "email": "unclecheese@leftandmain.com"
-                }
-            ],
-            "description": "Allows assignment of conditions for display and hide of specific form fields based on client side behavior.",
-            "keywords": [
-                "Forms",
-                "cms",
-                "display",
-                "logic",
-                "silverstripe"
-            ],
-            "time": "2018-11-14T23:16:44+00:00"
-        },
-        {
             "name": "undefinedoffset/silverstripe-nocaptcha",
             "version": "2.0.0",
             "source": {
@@ -5159,8 +5026,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/userforms": 20,
-        "dynamic/silverstripe-elemental-countdown": 20,
-        "dynamic/silverstripe-elemental-flexslider": 20,
         "heyday/silverstripe-colorpalette": 20
     },
     "prefer-stable": true,
