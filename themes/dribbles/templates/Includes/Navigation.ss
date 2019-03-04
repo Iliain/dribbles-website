@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="$BaseHref">
             <img src="$SiteConfig.SiteLogo.URL" width="112" height="28">
@@ -40,10 +40,10 @@
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
-                    <!--<a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>-->
-                    <a class="button is-light" href="admin">
+                    <a class="button is-light" href="home/contact">
+                        Contact
+                    </a>
+                    <a class="button is-info" href="admin">
                         Log in
                     </a>
                 </div>
