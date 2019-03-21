@@ -1,4 +1,4 @@
-<p class="subtitle is-5">
+<p class="subtitle is-6">
     <%t SilverStripe\\Blog\\Model\\Blog.Posted "Posted" %>
     <a href="$MonthlyArchiveLink">$PublishDate.Format('EEE, MMM d')th $PublishDate.Format('y')</a><br>
     <% if $Credits %>
