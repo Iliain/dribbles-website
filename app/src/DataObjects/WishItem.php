@@ -12,16 +12,11 @@ class WishItem extends DataObject
         'Name'          => 'Varchar(255)',
         'Type'          => 'Varchar(255)',
         'Status'        => 'Boolean',
-        'Console'       => 'Varchar(255)',
         'Description'   => 'HTMLText'
     ];
 
     private static $has_one = [
         'WishListPage'  => WishlistPage::class
-    ];
-
-    private static $defaults = [
-        'Console'       => 'N/A'
     ];
 
     private static $summary_fields = [
@@ -43,7 +38,6 @@ class WishItem extends DataObject
             TextField::create('Name', 'Item'),
             TextField::create('Type', 'Type'),
             CheckboxField::create('Status', 'Status'),
-            TextField::create('Console', 'Console'),
             HTMLEditorField::create('Description', 'Description')
         ]);
 

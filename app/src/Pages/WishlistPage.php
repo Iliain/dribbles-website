@@ -38,4 +38,10 @@ class WishlistPage extends Page
     {
         return $this->WishItems()->filter('Status', 1)->count();
     }
+
+    public function  calculatePercentage()
+    {
+        $number = ($this->countOwned() / $this->WishItems()->count()) * 100;
+        return number_format(number_format((float)$number, 0, '.', ''));
+    }
 }
