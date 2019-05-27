@@ -1,9 +1,9 @@
 <?php
 
+use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\CheckboxField;
 
 class WishItem extends DataObject
 {
@@ -11,7 +11,7 @@ class WishItem extends DataObject
         'Sort'          => 'Int',
         'Name'          => 'Varchar(255)',
         'Type'          => 'Varchar(255)',
-        'Status'        => 'Boolean',
+        'State'         => 'Enum("Purchased,Gifted,Awaiting","Awaiting")',
         'Description'   => 'HTMLText'
     ];
 
@@ -22,7 +22,7 @@ class WishItem extends DataObject
     private static $summary_fields = [
         'Name'          => 'Name',
         'Type'          => 'Type',
-        'Status'        => 'Status'
+        'State'         => 'Status'
     ];
 
     public function getCMSFields()
@@ -37,7 +37,7 @@ class WishItem extends DataObject
         $fields->addFieldstoTab('Root.Main', [
             TextField::create('Name', 'Item'),
             TextField::create('Type', 'Type'),
-            CheckboxField::create('Status', 'Status'),
+            DropdownField::create('State', 'Status', $this->dbObject('State')->enumValues()),
             HTMLEditorField::create('Description', 'Description')
         ]);
 

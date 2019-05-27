@@ -6,8 +6,10 @@
                 $Form
                 <% if $WishItems %>
                     <h2 class="is-2" style="text-align: center">Progress: $calculatePercentage%</h2>
-                    <progress class="progress is-info is-medium is-fullwidth" value="$countOwned" max="$WishItems.Count">$countOwned</progress>
+                    <progress class="progress $ProgressBarColour is-medium is-fullwidth" value="$countOwned" max="$WishItems.Count">$countOwned</progress>
+
                     <h2 class="is-2" style="text-align: center">List</h2>
+                    <p><span id="archiveButton" class="icon is-large" style="cursor: pointer"><i class="fas fa-lg fa-search"></i></span> Hide/show owned items</p>
                     <div style="overflow-x: auto;">
                         <table class="table is-bordered is-hoverable is-striped">
                             <thead>
@@ -19,7 +21,7 @@
                             </thead>
                             <tbody>
                                 <% loop $WishItems %>
-                                <tr <% if $Status %>class="is-selected"<% end_if %>>
+                                <tr <% if $State = 'Gifted' %>class="archive" style="$Top.GiftedColour"<% else_if $State = 'Purchased' %>class="archive" style="$Top.PurchasedColour"<% end_if %>>
                                     <td>$Name</td>
                                     <td>$Type</td>
                                     <td>$Description</td>

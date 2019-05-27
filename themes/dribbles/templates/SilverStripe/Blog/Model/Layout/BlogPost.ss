@@ -6,11 +6,11 @@
 	<% end_if %>
 	<br>
 	<div class="columns">
-		<div class="column"></div>
-		<div class="column is-three-fifths">
+		<div class="column is-8">
             <h1 class="title is-1">$Title</h1>
 			<% include SilverStripe\\Blog\\EntryMeta %>
 		</div>
+        <div class="column is-1"></div>
 		<div class="column">
 			<% if $Categories.exists %>
 				<% loop $Categories %>
@@ -21,13 +21,11 @@
 	</div>
 	<br>
 	<div class="columns">
-        <div class="column">
-
-        </div>
-		<div class="column is-three-fifths">
+		<div class="column is-8">
 			$Content
 			$ElementalArea
 		</div>
+		<div class="column is-1"></div>
         <div class="column">
 			<% include SilverStripe\\Blog\\BlogSideBar %>
         </div>
