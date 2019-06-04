@@ -17,9 +17,9 @@
             <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
                 <% include SilverStripe\\Blog\\EntryMeta %>
             <% else %>
-                <% if $Parent.SubTitle %>
+                <% if $SubTitle %>
                     <h2 class="subtitle">
-                        $Parent.SubTitle
+                        $SubTitle
                     </h2>
                 <% end_if %>
             <% end_if %>
