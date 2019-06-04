@@ -55,7 +55,7 @@
 
 <style>
     .post-block {
-        height: 14vh;
+        height: 13vh;
     }
 
     .post-block:hover
