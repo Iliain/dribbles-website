@@ -2,7 +2,6 @@
 
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Controllers\ContentController;
-use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
 
 class PageController extends ContentController
@@ -52,5 +51,14 @@ class PageController extends ContentController
     public function getLatestBlogPosts()
     {
         return BlogPost::get()->limit(5);
+    }
+
+    public function getRowCount($count)
+    {
+        if ($count % 3 == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

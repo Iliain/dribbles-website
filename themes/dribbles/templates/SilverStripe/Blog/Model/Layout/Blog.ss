@@ -26,9 +26,19 @@
         <% if $PaginatedList.Exists %>
             <div class="columns">
                 <% loop $PaginatedList %>
-                   <div class="column is-one-third">
+
+                    <div class="column is-one-third">
                         <% include SilverStripe\\Blog\\PostSummary %>
                     </div>
+
+                    <% if $Top.getRowCount($Pos) %>
+                        </div><div class="columns">
+                    <% end_if %>
+
+                    <% if $Last %>
+                        </div>
+                    <% end_if %>
+
                 <% end_loop %>
             </div>
         <% else %>
