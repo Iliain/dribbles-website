@@ -60,6 +60,12 @@
 
     .post-block:hover
     {
-        opacity: 0.8;
+        opacity: 0.9;
+        transform: scale(1.05);
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        transition: all .4s ease;
     }
 </style>
