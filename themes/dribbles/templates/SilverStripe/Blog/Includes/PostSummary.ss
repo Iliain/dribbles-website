@@ -1,27 +1,14 @@
-<div class="post-summary">
-	<div class="columns">
-		<div class="column">
-            <h2 class="title is-4">
-                <a href="$Link" title="<%t SilverStripe\\Blog\\Model\\Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
-					<% if $MenuTitle %>$MenuTitle
-					<% else %>$Title<% end_if %>
-                </a>
-            </h2>
-
-			<% if $Summary %>
-                <p class="subtitle">$Summary</p>
-			<% else %>
-                <p class="subtitle is-6">$Excerpt</p>
-			<% end_if %>
-
-			<% include SilverStripe\\Blog\\EntryMeta %>
-		</div>
-		<div class="column">
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="$FeaturedImage.URL">
-            </figure>
-		</div>
+<a href="$Link">
+	<div class="post-summary has-text-centered post-block" style="color: whitesmoke; padding: 20px; background: linear-gradient(rgba(54, 54, 54, 0.60), rgba(54, 54, 54, 0.60)), url('$BannerImage.URL');">
+		<h2 class="title is-4" style="color: whitesmoke">
+				<% if $MenuTitle %>$MenuTitle
+				<% else %>$Title<% end_if %>
+		</h2>
+		<% if $Summary %>
+			<p class="subtitle" >$Summary</p>
+		<% else %>
+			<p class="subtitle is-6">$Excerpt</p>
+		<% end_if %>
 	</div>
+</a>
 
-</div>
-<br>

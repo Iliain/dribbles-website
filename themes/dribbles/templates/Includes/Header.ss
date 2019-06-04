@@ -1,4 +1,4 @@
-<section class="hero <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" && $BannerImage %>is-medium<% end_if %> <% if $BackgroundColor %>$BackgroundColor<% else %>is-dark<% end_if %>">
+<section class="hero is-medium <% if $BackgroundColor %>$BackgroundColor<% else %>is-dark<% end_if %>">
     <div class="hero-head">
         <div class="container">
             <a href="$BaseHref" rel="home"></a>
@@ -11,13 +11,12 @@
         </div>
     </div>
 
-    <div class="hero-body<% if $ClassName == "SilverStripe\Blog\Model\BlogPost" && $BannerImage %> has-image<% end_if %>">
+    <div class="hero-body<% if $BannerImage %> has-image<% end_if %>">
         <div class="container has-text-centered anti-blur">
+            <h1 class="title is-1">$setUppercase($MenuTitle)</h1>
             <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
-                <h1 class="title is-1">$setUppercase($MenuTitle)</h1>
                 <% include SilverStripe\\Blog\\EntryMeta %>
             <% else %>
-                <h1 class="title is-1">$MenuTitle</h1>
                 <% if $Parent.SubTitle %>
                     <h2 class="subtitle">
                         $Parent.SubTitle

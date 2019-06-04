@@ -18,23 +18,42 @@
         <% end_if %>
     </h1>
 
-    <div class="content">$Content</div>
+    <div class="content">
+        $ElementalArea
+    </div>
+
+    <div class="grid">
+        <% if $PaginatedList.Exists %>
+            <div class="columns">
+                <% loop $PaginatedList %>
+                   <div class="column is-one-third">
+                        <% include SilverStripe\\Blog\\PostSummary %>
+                    </div>
+                <% end_loop %>
+            </div>
+        <% else %>
+            <p><%t SilverStripe\\Blog\\Model\\Blog.NoPosts 'There are no posts' %></p>
+        <% end_if %>
+    </div>
 
     <div class="columns">
-        <div class="column is-two-thirds">
-            <% if $PaginatedList.Exists %>
-                <% loop $PaginatedList %>
-                    <% include SilverStripe\\Blog\\PostSummary %>
-                <% end_loop %>
-            <% else %>
-                <p><%t SilverStripe\\Blog\\Model\\Blog.NoPosts 'There are no posts' %></p>
-            <% end_if %>
-        </div>
-        <div class="column">
-            <% with $PaginatedList %>
-                <% include SilverStripe\\Blog\\Pagination %>
-            <% end_with %>
-            <% include SilverStripe\\Blog\\BlogSideBar %>
-        </div>
+        <% with $PaginatedList %>
+            <% include SilverStripe\\Blog\\Pagination %>
+        <% end_with %>
     </div>
 </div>
+
+<style>
+    .post-block {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .post-block:hover
+    {
+        opacity: 0.8;
+    }
+</style>
