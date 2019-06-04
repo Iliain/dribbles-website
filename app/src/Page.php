@@ -1,6 +1,8 @@
 <?php
 
 use Heyday\ColorPalette\Fields\ColorPaletteField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextField;
 
@@ -11,16 +13,25 @@ class Page extends SiteTree
         'SubTitle'          => 'Varchar(255)'
     ];
 
+    private static $has_one = [
+        'BannerImage'       => Image::class
+    ];
+
     private static $defaults = [
         'BackgroundColor'   => 'is-dark',
+    ];
+
+    private static $owns = [
+        'BannerImage'
     ];
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Main', TextField::create('SubTitle', 'Subtitle'), 'ElementalArea');
+        $fields->insertAfter('Title', TextField::create('SubTitle', 'Subtitle'));
 
-        $fields->addFieldsToTab('Root.Main', [
+        $fields->addFieldsToTab('Root.Design', [
+            UploadField::create('BannerImage', 'Banner Image')->setFolderName('BannerImages'),
             ColorPaletteField::create('BackgroundColor', 'Background Color', [
                 'is-dark' => '#363636', //Black
                 'is-light' => '#f5f5f5', //Light Grey
@@ -30,7 +41,7 @@ class Page extends SiteTree
                 'is-warning' => '#ffdd57' , //Yellow
                 'is-danger' => '#ff3860' //Red
             ])->setDescription('Set the page header colour.')
-        ], 'ElementalArea');
+        ]);
 
         return $fields;
     }

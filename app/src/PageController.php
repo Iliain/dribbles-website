@@ -1,5 +1,6 @@
 <?php
 
+use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Controllers\ContentController;
 use SilverStripe\Control\Director;
 use SilverStripe\View\Requirements;
@@ -41,5 +42,15 @@ class PageController extends ContentController
         // Slick
         Requirements::css('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
         Requirements::javascript('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+    }
+
+    public function setUppercase($text)
+    {
+        return strtoupper($text);
+    }
+
+    public function getLatestBlogPosts()
+    {
+        return BlogPost::get()->limit(5);
     }
 }

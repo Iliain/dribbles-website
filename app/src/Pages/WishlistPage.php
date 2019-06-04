@@ -65,7 +65,18 @@ class WishlistPage extends Page
                 'is-success'    => '#23d160',   //Green
                 'is-warning'    => '#ffdd57' ,  //Yellow
                 'is-danger'     => '#ff3860'    //Red
-            ])->setDescription('Set the colour for the progess bar.')
+            ])->setDescription('Set the colour for the progess bar.'),
+            ColorPaletteField::create('TestColours', 'Test Colours', [
+                'orange'       => '#ff9e17',   //Orange
+                'blue'      => '#10b7d3',   //Blue
+                'cream'    => '#faf6ee' ,  //Cream
+                'navy'       => '#13193c',   //Navy
+                'green'    => '#8ba884',   //Green
+                'pink'    => '#f5bab0',  //Pink
+                'white'     => '#fff',    //White
+                'skyblue'         => '#b3d4fc',  //Pink
+                'charcoal'         => '#333439',  //Pink
+            ])->setDescription('Test colours go here')
         ]);
 
         return $fields;
