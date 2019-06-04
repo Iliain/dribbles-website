@@ -55,7 +55,7 @@
 
 <style>
     .post-block {
-        height: 13vh;
+        min-height: 13.5vh;
     }
 
     .post-block:hover
