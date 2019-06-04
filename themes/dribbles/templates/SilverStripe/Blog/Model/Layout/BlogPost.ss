@@ -1,9 +1,4 @@
 <div class="container">
-	<% if $FeaturedImage %>
-		<figure class="image">
-			<img src="$FeaturedImage.URL">
-		</figure>
-	<% end_if %>
     <br>
 	<div class="columns">
 		<div class="column is-8">

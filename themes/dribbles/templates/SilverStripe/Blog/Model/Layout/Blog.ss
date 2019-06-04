@@ -55,11 +55,7 @@
 
 <style>
     .post-block {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 100%;
+        height: 14vh;
     }
 
     .post-block:hover
