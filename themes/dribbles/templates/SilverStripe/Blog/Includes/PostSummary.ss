@@ -1,7 +1,7 @@
 <a href="$Link">
     <div class="box post-block" style="position: relative; background-color: #ffffff00; overflow: hidden;">
         <div class="box-background" style="
-                background: linear-gradient(rgba(54, 54, 54, 0.60), rgba(54, 54, 54, 0.60)), url('$FeaturedImage.URL');
+                background: linear-gradient(rgba(54, 54, 54, 0.30), rgba(54, 54, 54, 0.30)), url('$FeaturedImage.URL');
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;"></div>
