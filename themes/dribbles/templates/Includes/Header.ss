@@ -1,4 +1,4 @@
-<section class="hero is-medium <% if $BackgroundColor %>$BackgroundColor<% else %>is-dark<% end_if %>">
+<section class="hero is-medium <% if $BackgroundColor && not $BannerImage %>$BackgroundColor<% else %>is-dark<% end_if %>">
     <div class="hero-head">
         <div class="container">
             <a href="$BaseHref" rel="home"></a>
