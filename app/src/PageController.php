@@ -2,6 +2,7 @@
 
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\Dev\Debug;
 use SilverStripe\View\Requirements;
 
 class PageController extends ContentController
@@ -43,9 +44,13 @@ class PageController extends ContentController
         Requirements::javascript('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
     }
 
-    public function setUppercase($text)
+    public function setUppercase($input)
     {
-        return strtoupper($text);
+        $output = preg_replace_callback("/(&#[0-9]+;)/", function($m) {
+            return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES");
+        }, $input);
+
+        return strtoupper($output);
     }
 
     public function getLatestBlogPosts()
@@ -53,9 +58,9 @@ class PageController extends ContentController
         return BlogPost::get()->limit(5);
     }
 
-    public function getRowCount($count)
+    public function getRowCount($count, $divisible)
     {
-        if ($count % 3 == 0) {
+        if ($count % $divisible == 0) {
             return true;
         } else {
             return false;

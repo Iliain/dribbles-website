@@ -5,6 +5,7 @@
 			$Content
 			$ElementalArea
 		</div>
+        <div class="column is-1"></div>
         <div class="column">
 			<% include SilverStripe\\Blog\\BlogSideBar %>
             <% if $Tags.exists %>

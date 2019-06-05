@@ -13,8 +13,8 @@
         |
     <% end_if %>
     $PublishDate.Format('MMM d y')
-    |
     <% if $Categories.exists %>
+        |
         <% loop $Categories %>
             <a href="$Link" title="$Title">$Title</a><% if not $Last %>, <% end_if %>
         <% end_loop %>

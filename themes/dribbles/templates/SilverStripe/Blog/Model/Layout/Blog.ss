@@ -1,25 +1,32 @@
 <div class="container">
 
-    <h1>
-        <% if $ArchiveYear %>
-            <%t SilverStripe\\Blog\\Model\\Blog.Archive 'Archive' %>:
-            <% if $ArchiveDay %>
-                $ArchiveDate.Nice
-            <% else_if $ArchiveMonth %>
-                $ArchiveDate.format('F, Y')
-            <% else %>
-                $ArchiveDate.format('Y')
-            <% end_if %>
-        <% else_if $CurrentTag %>
-            <%t SilverStripe\\Blog\\Model\\Blog.Tag 'Tag' %>: $CurrentTag.Title
-        <% else_if $CurrentCategory %>
-            <%t SilverStripe\\Blog\\Model\\Blog.Category 'Category' %>: $CurrentCategory.Title
-        <% else %>
-        <% end_if %>
-    </h1>
-
     <div class="content">
         $ElementalArea
+
+        <% if $ArchiveYear %>
+            <h2 class="has-text-centered">
+                <%t SilverStripe\\Blog\\Model\\Blog.Archive 'Archive' %>:
+                <% if $ArchiveDay %>
+                    $ArchiveDate.Nice
+                <% else_if $ArchiveMonth %>
+                    $ArchiveDate.format('F, Y')
+                <% else %>
+                    $ArchiveDate.format('Y')
+                <% end_if %>
+            </h2>
+            <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+        <% else_if $CurrentTag %>
+            <h2 class="has-text-centered">
+                <%t SilverStripe\\Blog\\Model\\Blog.Tag 'Selected Tag' %>: $CurrentTag.Title
+            </h2>
+            <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+        <% else_if $CurrentCategory %>
+            <h2 class="has-text-centered">
+                <%t SilverStripe\\Blog\\Model\\Blog.Category 'Selected Category' %>: $CurrentCategory.Title
+            </h2>
+            <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+        <% else %>
+        <% end_if %>
     </div>
 
     <div class="grid">
@@ -31,7 +38,7 @@
                         <% include SilverStripe\\Blog\\PostSummary %>
                     </div>
 
-                    <% if $Top.getRowCount($Pos) %>
+                    <% if $Top.getRowCount($Pos, 3) %>
                         </div><div class="columns">
                     <% end_if %>
 
