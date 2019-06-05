@@ -64,7 +64,6 @@
     .post-block {
         min-height: 13.5vh;
     }
-
     .post-block:hover
     {
         opacity: 0.9;
@@ -74,5 +73,20 @@
         -ms-transition: all .4s ease;
         -o-transition: all .4s ease;
         transition: all .4s ease;
+    }
+    .box-background {
+        color: whitesmoke;
+        padding: 20px;
+        position: absolute;
+        top: -4px;
+        bottom: -4px;
+        left: -4px;
+        right: -4px;
+        z-index: -1;
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
     }
 </style>

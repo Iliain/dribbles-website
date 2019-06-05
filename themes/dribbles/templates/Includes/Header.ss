@@ -11,8 +11,8 @@
         </div>
     </div>
 
-    <div class="hero-body<% if $BannerImage %> has-image<% end_if %>">
-        <div class="container has-text-centered anti-blur">
+    <div class="hero-body" <% if $BannerImage %>style="position: relative"<% end_if %>>
+        <div class="container has-text-centered" style="z-index: 1">
             <h1 class="title is-1">$setUppercase($MenuTitle)</h1>
             <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
                 <% include SilverStripe\\Blog\\EntryMeta %>
@@ -24,7 +24,9 @@
                 <% end_if %>
             <% end_if %>
         </div>
+        <% if $BannerImage %><div class="has-image"></div><% end_if %>
     </div>
+
 
     <div class="hero-foot">
         <nav class="tabs is-boxed is-fullwidth">
@@ -48,5 +50,15 @@
         background-repeat: no-repeat;
         /*background-attachment: fixed;*/
         background-size: cover;
+        position:absolute;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        left:0px;
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
     }
 </style>
