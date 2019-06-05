@@ -1,4 +1,4 @@
-<section class="hero is-medium <% if $BackgroundColor && not $BannerImage %>$BackgroundColor<% else %>is-dark<% end_if %>">
+<section class="hero is-medium<% if $BackgroundColor && $BannerSource == 'None' %> $BackgroundColor<% else %> is-dark<% end_if %>">
     <div class="hero-head">
         <div class="container">
             <a href="$BaseHref" rel="home"></a>
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="hero-body" <% if $BannerImage %>style="position: relative"<% end_if %>>
+    <div class="hero-body" style="position: relative">
         <div class="container has-text-centered" style="z-index: 1">
             <h1 class="title is-1">$setUppercase($MenuTitle)</h1>
             <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
@@ -24,9 +24,8 @@
                 <% end_if %>
             <% end_if %>
         </div>
-        <% if $BannerImage %><div class="has-image"></div><% end_if %>
+        <% if $BannerSource != 'None' %><div class="has-image"></div><% end_if %>
     </div>
-
 
     <div class="hero-foot">
         <nav class="tabs is-boxed is-fullwidth">
@@ -45,7 +44,8 @@
 
 <style>
     .has-image {
-        background: linear-gradient(rgba(54, 54, 54, 0.60), rgba(54, 54, 54, 0.60)), url("$BannerImage.URL");
+        background: linear-gradient(rgba(54, 54, 54, 0.60), rgba(54, 54, 54, 0.60)),
+        url("<% if $BannerSource == 'Custom' %>$BannerImage.URL<% else_if $BannerSource == 'Parent' %>$Parent.BannerImage.URL<% else_if $BannerSource == 'Global' %>$SiteConfig.BannerImage.URL<% end_if %>");
         background-position: center center;
         background-repeat: no-repeat;
         /*background-attachment: fixed;*/

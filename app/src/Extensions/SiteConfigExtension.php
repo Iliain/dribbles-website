@@ -16,10 +16,12 @@ class SiteConfigExtension extends DataExtension
 
     private static $has_one = [
         'SiteLogo'      => Image::class,
+        'BannerImage'   => Image::class
     ];
 
     private static $owns = [
         'SiteLogo',
+        'BannerImage'
     ];
 
     private static $extensions = [
@@ -33,6 +35,10 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab('Root.Header', [
             HeaderField::create('HeaderTitle', 'Header Section'),
             UploadField::create('SiteLogo', 'Site Logo')
+        ]);
+
+        $fields->addFieldsToTab('Root.Globals', [
+            UploadField::create('BannerImage', 'Banner Image')->setFolderName('BannerImages')
         ]);
 
         $fields->addFieldsToTab('Root.Footer', [
