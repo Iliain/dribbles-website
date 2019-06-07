@@ -17,9 +17,7 @@
 <body class="has-navbar-fixed-top">
   <% include Navigation %>
   <% include Header %>
-  <section class="section">
-    $Layout
-  </section>
+  $Layout
   <% include Footer %>
   <script type="text/javascript">
       $(document).ready(function() {

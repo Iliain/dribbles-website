@@ -1,7 +1,8 @@
-<div class="container">
-    <div class="content">
-      $ElementalArea
-      $Form
+<section class="section">
+    <div class="container">
+        <div class="content">
+          $ElementalArea
+          $Form
+        </div>
     </div>
-</div>
-
+</section>

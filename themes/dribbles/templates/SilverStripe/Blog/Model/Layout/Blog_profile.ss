@@ -1,23 +1,25 @@
-<% require css('silverstripe/blog: client/dist/styles/main.css') %>
+<section class="section">
+	<% require css('silverstripe/blog: client/dist/styles/main.css') %>
 
-<div class="blog-entry content-container <% if $SideBarView %>unit size3of4<% end_if %>">
+	<div class="blog-entry content-container <% if $SideBarView %>unit size3of4<% end_if %>">
 
-	<% include SilverStripe\\Blog\\MemberDetails %>
+		<% include SilverStripe\\Blog\\MemberDetails %>
 
-	<% if $PaginatedList.Exists %>
-        <h2><%t SilverStripe\\Blog\\Model\\Blog.PostsByUser 'Posts by {firstname} {surname} for {title}' firstname=$CurrentProfile.FirstName surname=$CurrentProfile.Surname title=$Title %></h2>
-		<% loop $PaginatedList %>
-			<% include SilverStripe\\Blog\\PostSummary %>
-		<% end_loop %>
-	<% end_if %>
+		<% if $PaginatedList.Exists %>
+			<h2><%t SilverStripe\\Blog\\Model\\Blog.PostsByUser 'Posts by {firstname} {surname} for {title}' firstname=$CurrentProfile.FirstName surname=$CurrentProfile.Surname title=$Title %></h2>
+			<% loop $PaginatedList %>
+				<% include SilverStripe\\Blog\\PostSummary %>
+			<% end_loop %>
+		<% end_if %>
 
-	$Form
-	$CommentsForm
+		$Form
+		$CommentsForm
 
-	<% with $PaginatedList %>
-		<% include SilverStripe\\Blog\\Pagination %>
-	<% end_with %>
+		<% with $PaginatedList %>
+			<% include SilverStripe\\Blog\\Pagination %>
+		<% end_with %>
 
-</div>
+	</div>
 
-<% include SilverStripe\\Blog\\BlogSideBar %>
+	<% include SilverStripe\\Blog\\BlogSideBar %>
+</section>
