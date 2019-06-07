@@ -61,32 +61,16 @@
 </div>
 
 <style>
-    .post-block {
+    .blog-card-content {
         min-height: 13.5vh;
     }
-    .post-block:hover
+    .card-popup:hover
     {
-        opacity: 0.9;
-        transform: scale(1.05);
-        -webkit-transition: all .4s ease;
-        -moz-transition: all .4s ease;
-        -ms-transition: all .4s ease;
-        -o-transition: all .4s ease;
-        transition: all .4s ease;
-    }
-    .box-background {
-        color: whitesmoke;
-        padding: 20px;
-        position: absolute;
-        top: -4px;
-        bottom: -4px;
-        left: -4px;
-        right: -4px;
-        z-index: -1;
-        -webkit-filter: blur(3px);
-        -moz-filter: blur(3px);
-        -o-filter: blur(3px);
-        -ms-filter: blur(3px);
-        filter: blur(3px);
+        transform: scale(1.03);
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
     }
 </style>

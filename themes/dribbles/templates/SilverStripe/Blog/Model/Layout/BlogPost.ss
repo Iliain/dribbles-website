@@ -18,6 +18,6 @@
 	</div>
 
 	$Form
-	<%--$CommentsForm--%>
+	$CommentsForm
 
 </div>

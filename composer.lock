@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e092d72b114018fb5766f7fab589b74d",
+    "content-hash": "d65522851ff979a1cdb33efef16c920f",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -247,7 +247,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dexven/facebook-token-converter",
-                "reference": "d3036df6603310818a25ddabd3209ce97795116e"
+                "reference": "a52585ff3af634df7fd0d5d5dd3f0b6a82f2f040"
             },
             "require": {
                 "silverstripe/cms": "^4",
@@ -280,7 +280,7 @@
             "support": {
                 "issues": "https://github.com/Dexven/facebook-token-converter/issues"
             },
-            "time": "2019-03-21T04:09:20+00:00"
+            "time": "2019-06-06T07:30:44+00:00"
         },
         {
             "name": "dnadesign/silverstripe-elemental",
@@ -1060,6 +1060,63 @@
                 "watermark"
             ],
             "time": "2018-05-29T14:19:03+00:00"
+        },
+        {
+            "name": "jonom/focuspoint",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-focuspoint.git",
+                "reference": "16dedb9549e719bf5d1030eb84f664f7b7a69e8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/16dedb9549e719bf5d1030eb84f664f7b7a69e8f",
+                "reference": "16dedb9549e719bf5d1030eb84f664f7b7a69e8f",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/asset-admin": "^1.0",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "client"
+                ],
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JonoM\\FocusPoint\\": "src/",
+                    "JonoM\\FocusPoint\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Smarter automatic image cropping for SilverStripe",
+            "keywords": [
+                "crop",
+                "cropping",
+                "focus",
+                "focuspoint",
+                "image",
+                "silverstripe"
+            ],
+            "time": "2018-01-30T20:03:17+00:00"
         },
         {
             "name": "jonom/silverstripe-betternavigator",
