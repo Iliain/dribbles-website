@@ -1,4 +1,4 @@
-<div class="card card-popup">
+<div class="card card-popup" style="height: 100%;">
     <% if $FeaturedImage %>
         <a href="$Link">
             <div class="card-image blog-card-image">
