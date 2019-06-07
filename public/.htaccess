@@ -34,7 +34,10 @@ ErrorDocument 500 /assets/error-500.html
     RewriteEngine On
     RewriteBase '//public'
 
-    
+    RewriteCond %{HTTP_HOST} ^(|www.)dribbles.info$
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/?(.*) https://www.dribbles.info/$1 [R=301,L]
+
 
     # Deny access to potentially sensitive files and folders
     RewriteRule ^vendor(/|$) - [F,L,NC]
