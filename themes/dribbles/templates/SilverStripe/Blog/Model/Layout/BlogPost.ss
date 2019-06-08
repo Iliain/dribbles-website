@@ -1,3 +1,5 @@
+<% include Header %>
+
 <section class="section">
     <div class="container">
         <br>

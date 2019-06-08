@@ -1,15 +1,13 @@
 <div class="card card-popup" style="height: 100%;">
-    <% if $FeaturedImage %>
-        <a href="$Link">
-            <div class="card-image blog-card-image">
-                <figure class="image is-2by1" style="
-                        background-image: url('$FeaturedImage.FocusFill(370, 180).URL');
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: cover;"></figure>
-            </div>
-        </a>
-    <% end_if %>
+      <a href="$Link">
+          <div class="card-image blog-card-image">
+              <figure class="image is-2by1" style="
+                      background-image: url('<% if $FeaturedImage %>$FeaturedImage.FocusFill(370, 180).URL<% else %>$ThemeDir/assets/placeholder-img.png<% end_if %>');
+                      background-position: center center;
+                      background-repeat: no-repeat;
+                      background-size: cover;"></figure>
+          </div>
+      </a>
     <div class="card-content blog-card-content">
         <div class="media">
             <div class="media-content">

@@ -1,3 +1,5 @@
+<% include Header %>
+
 <section class="section">
     <div class="container">
         <h1 class="title">$MenuTitle</h1>

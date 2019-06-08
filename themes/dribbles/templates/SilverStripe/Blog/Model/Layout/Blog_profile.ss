@@ -1,25 +1,81 @@
+<% include Header %>
+
 <section class="section">
-	<% require css('silverstripe/blog: client/dist/styles/main.css') %>
+    <div class="container">
 
-	<div class="blog-entry content-container <% if $SideBarView %>unit size3of4<% end_if %>">
+        <div class="content">
+            <h1>Articles by:</h1>
+						<% include SilverStripe\\Blog\\MemberDetails %>
 
-		<% include SilverStripe\\Blog\\MemberDetails %>
+            <% if $ArchiveYear %>
+                <h2 class="has-text-centered">
+                    <%t SilverStripe\\Blog\\Model\\Blog.Archive 'Archive' %>:
+                    <% if $ArchiveDay %>
+                        $ArchiveDate.Nice
+                    <% else_if $ArchiveMonth %>
+                        $ArchiveDate.format('F, Y')
+                    <% else %>
+                        $ArchiveDate.format('Y')
+                    <% end_if %>
+                </h2>
+                <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+            <% else_if $CurrentTag %>
+                <h2 class="has-text-centered">
+                    <%t SilverStripe\\Blog\\Model\\Blog.Tag 'Selected Tag' %>: $CurrentTag.Title
+                </h2>
+                <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+            <% else_if $CurrentCategory %>
+                <h2 class="has-text-centered">
+                    <%t SilverStripe\\Blog\\Model\\Blog.Category 'Selected Category' %>: $CurrentCategory.Title
+                </h2>
+                <h5 class="has-text-centered">Results: $PaginatedList.Count</h5>
+            <% else %>
+            <% end_if %>
+        </div>
 
-		<% if $PaginatedList.Exists %>
-			<h2><%t SilverStripe\\Blog\\Model\\Blog.PostsByUser 'Posts by {firstname} {surname} for {title}' firstname=$CurrentProfile.FirstName surname=$CurrentProfile.Surname title=$Title %></h2>
-			<% loop $PaginatedList %>
-				<% include SilverStripe\\Blog\\PostSummary %>
-			<% end_loop %>
-		<% end_if %>
+        <div class="grid">
+            <% if $PaginatedList.Exists %>
+                <div class="columns">
+                    <% loop $PaginatedList %>
 
-		$Form
-		$CommentsForm
+                        <div class="column is-one-third">
+                            <% include SilverStripe\\Blog\\PostSummary %>
+                        </div>
 
-		<% with $PaginatedList %>
-			<% include SilverStripe\\Blog\\Pagination %>
-		<% end_with %>
+                        <% if $Top.getRowCount($Pos, 3) %>
+                            </div><div class="columns">
+                        <% end_if %>
 
-	</div>
+                        <% if $Last %>
+                            </div>
+                        <% end_if %>
 
-	<% include SilverStripe\\Blog\\BlogSideBar %>
+                    <% end_loop %>
+                </div>
+            <% else %>
+                <p><%t SilverStripe\\Blog\\Model\\Blog.NoPosts 'There are no posts' %></p>
+            <% end_if %>
+        </div>
+
+        <div class="columns">
+            <% with $PaginatedList %>
+                <% include SilverStripe\\Blog\\Pagination %>
+            <% end_with %>
+        </div>
+    </div>
+
+    <style>
+        .blog-card-content {
+            min-height: 13.5vh;
+        }
+        .card-popup:hover
+        {
+            transform: scale(1.03);
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+    </style>
 </section>

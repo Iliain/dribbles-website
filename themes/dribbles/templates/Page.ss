@@ -16,7 +16,6 @@
 </head>
 <body class="has-navbar-fixed-top">
   <% include Navigation %>
-  <% include Header %>
   $Layout
   <% include Footer %>
   <script type="text/javascript">

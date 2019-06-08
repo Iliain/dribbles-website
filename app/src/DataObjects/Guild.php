@@ -5,8 +5,8 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-class Guild extends DataObject {
-
+class Guild extends DataObject
+{
     private static $db = [
         'Name'    =>  'Text',
         'Dates'   =>  'Text',
@@ -27,8 +27,10 @@ class Guild extends DataObject {
         'Name'  => 'Name'
     ];
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
+
         $fields->addFieldtoTab('Root.Main', TextField::create('Name','Guild Name'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Dates','Dates'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Link','Armory Link'));
