@@ -7,6 +7,9 @@
           $FooterText
         <% end_with %>
       </p>
+      <a href="https://bulma.io">
+          <img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma" width="128" height="24">
+      </a>
     </div>
   </div>
 </footer>
