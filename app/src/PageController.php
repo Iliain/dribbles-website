@@ -46,11 +46,24 @@ class PageController extends ContentController
 
     public function setUppercase($input)
     {
-        $output = preg_replace_callback("/(&#[0-9]+;)/", function($m) {
-            return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES");
-        }, $input);
+        if ($input) {
+            $output = preg_replace_callback("/(&#[0-9]+;)/", function($m) {
+                return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES");
+            }, $input);
 
-        return strtoupper($output);
+            return strtoupper($output);
+        }
+    }
+
+    public function setLowercase($input = null)
+    {
+        if ($input) {
+            $output = preg_replace_callback("/(&#[0-9]+;)/", function($m) {
+                return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES");
+            }, $input);
+
+            return strtolower($output);
+        }
     }
 
     public function getLatestBlogPosts()

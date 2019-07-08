@@ -14,7 +14,7 @@
     <div class="hero-body" style="position: relative">
         <div class="container has-text-centered" style="z-index: 1">
             <h1 class="title is-1">$setUppercase($MenuTitle)</h1>
-            <% if $ClassName == "SilverStripe\Blog\Model\BlogPost" %>
+            <% if $ClassName.ShortName == "BlogPost" %>
                 <% include SilverStripe\\Blog\\EntryMeta %>
             <% else %>
                 <% if $SubTitle %>

@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="$BaseHref">
             <img src="$SiteConfig.SiteLogo.URL" width="112" height="28">
@@ -10,34 +10,33 @@
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-menu">
         <div class="navbar-start">
-			<% loop $Menu(1) %>
-				<% if $Children %>
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="$Link">
-                            $MenuTitle
-                        </a>
-
-                        <div class="navbar-dropdown">
-							<% loop $Children %>
-                                <a class="navbar-item" href="$Link">
-                                    $MenuTitle
-                                </a>
-							<% end_loop %>
-                        </div>
-                    </div>
-				<% else %>
-                    <a class="navbar-item" href="$Link">
-						$Title
-                    </a>
-				<% end_if %>
-
-			<% end_loop %>
-
         </div>
 
         <div class="navbar-end">
+            <% loop $Menu(1) %>
+                <% if $Children %>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="$Link">
+                            $Top.setLowercase($MenuTitle)
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <% loop $Children %>
+                                <a class="navbar-item" href="$Link">
+                                    $Top.setLowercase($MenuTitle)
+                                </a>
+                            <% end_loop %>
+                        </div>
+                    </div>
+                <% else %>
+                    <a class="navbar-item" href="$Link">
+                        $Top.setLowercase($MenuTitle)
+                    </a>
+                <% end_if %>
+
+            <% end_loop %>
             <div class="navbar-item">
                 <div class="buttons">
                     <a class="button is-light" href="home/contact">
