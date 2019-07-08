@@ -1,9 +1,9 @@
 <section class="hero<% if $BackgroundColor %> $BackgroundColor<% else %> is-dark<% end_if %> is-fullheight">
     <div class="hero-body">
         <div class="container">
-            <h2 class="subtitle">Welcome</h2>
-            <h1 class="title is-1">I'm Drew</h1>
-            <h2 class="subtitle is-2">Developer, Writer, Daydreamer</h2>
+            <h2 class="subtitle">$IntroLineOne</h2>
+            <h1 class="title is-1">$IntroLineTwo</h1>
+            <h2 class="subtitle is-2">$IntroLineThree</h2>
         </div>
     </div>
 </section>
@@ -12,21 +12,21 @@
     <div class="container">
         <div class="content has-text-centered">
             <div class="header-intro">
-                <h3 class="title is-3" style="margin-bottom: 2em">A little about me</h3>
+                <h3 class="title is-3" style="margin-bottom: 2em">$AboutSectionTitle</h3>
             </div>
         </div>
         <div class="columns">
             <div class="column">
                 <h4 class="title is-4">
-                    <span>ABOUT</span>
+                    <span>$AboutTitle</span>
                 </h4>
-                <p>Content</p>
+                <p>$AboutContent</p>
             </div>
             <div class="column">
 
                 <div class="content">
-                    <h4 class="is-4">SKILLS</h4>
-                    <p>Check out a list of my programming skills below, and how I would rate my proficiency</p>
+                    <h4 class="is-4">$SkillsTitle</h4>
+                    <p>$SkillsContent</p>
                     <br>
                     <h5 class="is-5">My programming languages</h5>
                     <ul style="list-style: none; margin-left: 0px;">
