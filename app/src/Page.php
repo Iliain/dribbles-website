@@ -49,9 +49,4 @@ class Page extends SiteTree
 
         return $fields;
     }
-
-    public function getControllerName()
-    {
-        return PageController::class;
-    }
 }
