@@ -19,5 +19,6 @@ vendor/
 !/themes/dribbles
 
 ##### Core
-!/mysite
-!/app
+!/mysite/
+!/app/
+!/node_modules/
