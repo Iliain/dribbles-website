@@ -15,3 +15,5 @@ $info: $blue-style;
 $progress-value-background-color: $blue-style;
 
 @import "../../../node_modules/bulma/bulma.sass";
+@import '../../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass';
+@import '../../../node_modules/bulma-extensions/bulma-carousel/src/sass/index.sass';

@@ -93,75 +93,34 @@
 
 <section class="hero is-light">
     <div class="hero-body">
-        <div class="container">
-            <nav class="level">
-                <h3 class="title is-3 level-item has-text-centered">
-                    Looking for something?
-                </h3>
-            </nav>
-            <br>
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">Looking for something?</h2>
+            <h5 class="subtitle is-5">Check out some of my content</h5>
+            <div class="divider is-centered"></div>
+        </div>
 
-            <nav class="level">
+        <div class="content-wrapper">
+            <div class="columns">
                 <% loop $FeaturedSections %>
-
-                    <div class="level-item">
-                        <a href="$Link.LinkURL">
-                            <div class="card">
-                                <div class="card-content has-text-centered">
-                                    <h3 class="title is-3">
-                                        $Title
-                                    </h3>
-                                    <br>
-                                    <p class="subtitle">
-                                        $Description
-                                    </p>
-                                </div>
-                                <footer class="card-footer">
-                                    <p class="card-footer-item">
-                                        <span>
-                                            $Link.Title
-                                        </span>
-                                    </p>
-                                </footer>
+                    <div class="column">
+                        <div class="card is-bordered has-text-centered">
+                            <div class="card-title"  style="padding: 25px">
+                                <h4 class="title is-4">Title</h4>
                             </div>
-                        </a>
-                    </div>
-
-                    <% if $Top.getRowCount($Pos, 3) %>
-                        </div><div class="columns">
-                    <% end_if %>
-
-                    <% if $Last %>
+                            <div class="card-icon">
+                                <%--<img alt="AppSeed App Generator Logo." class="lazy" src="https://bulma-css-bulmaplay.appseed.us/assets/images/illustrations/icons/mouse-globe.svg" style="display: inline-block; height: 120px;">--%>
+                            </div>
+                            <div class="card-text">
+                                <p>$Description</p>
+                            </div>
+                            <div class="card-action" style="padding: 25px;">
+                                <a href="$Link.LinkURL" class="button is-info">$Link.Title</a>
+                            </div>
                         </div>
-                    <% end_if %>
-
+                    </div>
                 <% end_loop %>
-            </nav>
-
+            </div>
         </div>
     </div>
+    <br>
 </section>
-
-
-<%--<section class="section">--%>
-    <%--<div class="container">--%>
-        <%--$ElementalArea--%>
-        <%--$Form--%>
-    <%--</div>--%>
-<%--</section>--%>
-
-<style>
-    .level-item:hover
-    {
-        transform: scale(1.03);
-        -webkit-transition: all .3s ease;
-        -moz-transition: all .3s ease;
-        -ms-transition: all .3s ease;
-        -o-transition: all .3s ease;
-        transition: all .3s ease;
-    }
-    .card-footer:hover
-    {
-        background-color: hsl(0, 0%, 86%);
-    }
-</style>
