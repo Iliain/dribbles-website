@@ -113,9 +113,11 @@
                             <div class="card-text" style="padding-left: 25px; padding-right: 25px;">
                                 $Description
                             </div>
-                            <div class="card-action" style="padding: 25px;">
-                                <a href="$Link.LinkURL" class="button is-info">$Link.Title</a>
-                            </div>
+                            <% if $Link.LinkURL %>
+                                <div class="card-action" style="padding: 25px;">
+                                    <a href="$Link.LinkURL" class="button is-info">$Link.Title</a>
+                                </div>
+                            <% end_if %>
                         </div>
                     </div>
                 <% end_loop %>
