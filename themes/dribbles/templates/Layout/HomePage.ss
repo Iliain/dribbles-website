@@ -104,10 +104,10 @@
                 <% loop $FeaturedSections %>
                     <div class="column">
                         <div class="card is-bordered has-text-centered" style="width: 300px; margin: 0 auto;">
-                            <div class="card-title"  style="padding: 25px">
+                            <div class="card-title" style="padding: 25px">
                                 <h4 class="title is-4">Title</h4>
                             </div>
-                            <div class="card-icon">
+                            <div class="card-icon" style="padding: 25px">
                                 <%--<img alt="AppSeed App Generator Logo." class="lazy" src="https://bulma-css-bulmaplay.appseed.us/assets/images/illustrations/icons/mouse-globe.svg" style="display: inline-block; height: 120px;">--%>
                             </div>
                             <div class="card-text">
