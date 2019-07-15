@@ -103,7 +103,7 @@
             <div class="columns" style="margin-left: 5rem; margin-right: 5rem;">
                 <% loop $FeaturedSections %>
                     <div class="column">
-                        <div class="card is-bordered has-text-centered" style="width: 300px; margin: 0 auto; height: 100%">
+                        <div class="card is-bordered has-text-centered" style="max-width: 300px; margin: 0 auto; height: 100%">
                             <div class="card-title" style="padding: 25px">
                                 <h4 class="title is-4">$Title</h4>
                             </div>
