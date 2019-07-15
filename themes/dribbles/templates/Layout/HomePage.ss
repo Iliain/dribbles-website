@@ -110,7 +110,7 @@
                             <div class="card-icon">
                                 <%--<img alt="AppSeed App Generator Logo." class="lazy" src="https://bulma-css-bulmaplay.appseed.us/assets/images/illustrations/icons/mouse-globe.svg" style="display: inline-block; height: 120px;">--%>
                             </div>
-                            <div class="card-text" style="padding-left: 5px; padding-right: 5px;">
+                            <div class="card-text" style="padding-left: 25px; padding-right: 25px;">
                                 $Description
                             </div>
                             <div class="card-action" style="padding: 25px;">
