@@ -33,7 +33,7 @@ class PageController extends ContentController
         $this->ThemeDir = 'themes/dribbles/';
 
         // CSS
-        Requirements::css($this->ThemeDir . "css/bulma.css");
+        Requirements::css($this->ThemeDir . "css/mystyles.css");
 
         // JS
         Requirements::javascript("//code.jquery.com/jquery-1.7.2.min.js");

@@ -8,6 +8,8 @@ vendor/
 !/.gitignore
 !/composer.json
 !/composer.lock
+!/package.json
+!/package-lock.json
 !/index.php
 !/robots.txt
 !/README.md

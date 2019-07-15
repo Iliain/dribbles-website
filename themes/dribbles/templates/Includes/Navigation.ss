@@ -19,20 +19,20 @@
                 <% if $Children %>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link" href="$Link">
-                            $Top.setLowercase($MenuTitle)
+                            $MenuTitle
                         </a>
 
                         <div class="navbar-dropdown">
                             <% loop $Children %>
                                 <a class="navbar-item" href="$Link">
-                                    $Top.setLowercase($MenuTitle)
+                                    $MenuTitle
                                 </a>
                             <% end_loop %>
                         </div>
                     </div>
                 <% else %>
                     <a class="navbar-item" href="$Link">
-                        $Top.setLowercase($MenuTitle)
+                        $MenuTitle
                     </a>
                 <% end_if %>
 
