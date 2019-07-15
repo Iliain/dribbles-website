@@ -99,8 +99,8 @@
             <div class="divider is-centered"></div>
         </div>
 
-        <div class="content-wrapper">
-            <div class="columns" style="margin-left: 5rem; margin-right: 5rem;">
+        <div class="wrapper">
+            <div class="columns">
                 <% loop $FeaturedSections %>
                     <div class="column">
                         <div class="card is-bordered has-text-centered" style="max-width: 300px; margin: 0 auto; height: 100%">
@@ -110,7 +110,7 @@
                             <div class="card-icon">
                                 <%--<img alt="AppSeed App Generator Logo." class="lazy" src="https://bulma-css-bulmaplay.appseed.us/assets/images/illustrations/icons/mouse-globe.svg" style="display: inline-block; height: 120px;">--%>
                             </div>
-                            <div class="card-text" style="padding-left: 25px; padding-right: 25px;">
+                            <div class="card-text" style="padding-left: 25px; padding-right: 25px; padding-bottom: 10px;">
                                 $Description
                             </div>
                             <% if $Link.LinkURL %>
