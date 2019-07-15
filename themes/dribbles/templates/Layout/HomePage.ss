@@ -107,11 +107,11 @@
                             <div class="card-title" style="padding: 25px">
                                 <h4 class="title is-4">Title</h4>
                             </div>
-                            <div class="card-icon" style="padding: 25px">
+                            <div class="card-icon">
                                 <%--<img alt="AppSeed App Generator Logo." class="lazy" src="https://bulma-css-bulmaplay.appseed.us/assets/images/illustrations/icons/mouse-globe.svg" style="display: inline-block; height: 120px;">--%>
                             </div>
-                            <div class="card-text">
-                                <p>$Description</p>
+                            <div class="card-text" style="padding-left: 5px; padding-right: 5px;">
+                                $Description
                             </div>
                             <div class="card-action" style="padding: 25px;">
                                 <a href="$Link.LinkURL" class="button is-info">$Link.Title</a>
