@@ -10,14 +10,14 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class FeaturedSection extends DataObject
 {
     private static $db = [
-        'Title'         =>  'Varchar(255)',
+        'Title'         => 'Varchar(255)',
         'Description'   => 'HTMLText',
         'Sort'          => 'Int'
     ];
 
     private static $has_one = [
         'Link'          => Link::class,
-        'HomePage'      => HomePage::class
+        'LinkCarousel'  => HomePage::class
     ];
 
     private static $summary_fields = [
@@ -31,7 +31,7 @@ class FeaturedSection extends DataObject
         $fields->removeFieldsFromTab('Root.Main', [
             'LinkID',
             'Sort',
-            'HomePageID'
+            'LinkCarouselID'
         ]);
 
         $fields->addFieldstoTab('Root.Main', [

@@ -29,6 +29,8 @@ class GuildElement extends BaseElement
 
     private static $description = 'Represents a Guild';
 
+    private static $table_name = 'Dribbles_GuildElement';
+
   	public function getCMSFields()
       {
           $fields = parent::getCMSFields();
