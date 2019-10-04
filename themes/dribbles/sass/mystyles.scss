@@ -2,18 +2,25 @@
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bellefair&display=swap');
 
 // Set your brand colors
-$red-style: #e21f1e;
-$blue-style: #59b4f0;
+$blue-primary: #13a8dd;
+$back-light-grey: #f5f5f5;
+$back-white: #fff;
+$ember-primary: #e27d45;
+$sanguine-primary: #ff2a34;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$link: $blue-style;
-$info: $blue-style;
+$family-sans-serif: "Be Vietnam", sans-serif;
+$primary: $ember-primary;
+$link: $ember-primary;
 
-$progress-value-background-color: $blue-style;
+// Update some of Bulma's component variables
+$body-background-color: $back-white;
+//$control-border-width: 2px;
+//$input-border-color: transparent;
+//$input-shadow: none;
 
-@import "../../../node_modules/bulma/bulma.sass";
-@import '../../../node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass';
-@import '../../../node_modules/bulma-extensions/bulma-carousel/src/sass/index.sass';
+@import "../node_modules/bulma/bulma.sass";

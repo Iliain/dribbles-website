@@ -5,8 +5,8 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/Dexven/facebook-token-converter",
-            "name": "dexven/facebook-token-converter"
+            "url": "https://github.com/Dexven/silverstripe-facebook-feed",
+            "name": "dexven/silverstripe-facebook-feed"
         }
     ],
     "require": {
@@ -26,7 +26,7 @@
         "symbiote/silverstripe-gridfieldextensions": "3.2.1",
         "heyday/silverstripe-colorpalette": "dev-master",
         "silverstripe/comments": "3.1.5",
-        "dexven/facebook-token-converter": "dev-master",
+        "dexven/silverstripe-facebook-feed": ">1.1.0",
         "unclecheese/display-logic": "2.0.2",
         "gorriecoe/silverstripe-link": "1.2.4",
         "gorriecoe/silverstripe-linkfield": "dev-master",

@@ -11,26 +11,13 @@
     <div class="card-content blog-card-content">
         <div class="media">
             <div class="media-content">
+                <time datetime="$PublishDate.Format('y-M-d')">$PublishDate.Format('MMMM d y')</time>
                 <a href="$Link">
                     <p class="title is-4">
                         <% if $MenuTitle %>$MenuTitle
                         <% else %>$Title<% end_if %>
                     </p>
                 </a>
-                <p class="subtitle is-6">
-                    <% if $Credits %>
-                        By
-                        <% loop $Credits %>
-                            <% if not $First && not $Last %>, <% end_if %>
-                            <% if not $First && $Last %> <%t SilverStripe\\Blog\\Model\\Blog.AND "and" %> <% end_if %>
-                            <% if $URLSegment && not $Up.ProfilesDisabled %>
-                                <a href="$URL">$Name.XML</a>
-                            <% else %>
-                                $Name.XML
-                            <% end_if %>
-                        <% end_loop %>
-                    <% end_if %>
-                </p>
             </div>
         </div>
 
@@ -40,7 +27,7 @@
             <% else %>
                 <p class="subtitle is-6">$Excerpt</p>
             <% end_if %>
-            <time datetime="$PublishDate.Format('y-M-d')">$PublishDate.Format('MMMM d y')</time>
+
         </div>
     </div>
 </div>

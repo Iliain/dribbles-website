@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a81472d50493b17e39888a6429a9d6d",
+    "content-hash": "6d73eed59f34728b33608be49de69cc1",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -326,14 +326,15 @@
             "time": "2019-08-12T15:00:31+00:00"
         },
         {
-            "name": "dexven/facebook-token-converter",
-            "version": "dev-master",
+            "name": "dexven/silverstripe-facebook-feed",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Dexven/facebook-token-converter",
-                "reference": "5e43af32c68fd73668624abbb75573293f531411"
+                "url": "https://github.com/Dexven/silverstripe-facebook-feed",
+                "reference": "c3c136f563435a5a6fcc92cf8fcf7ea00199720e"
             },
             "require": {
+                "guzzlehttp/guzzle": "^6.3",
                 "silverstripe/cms": "^4",
                 "silverstripe/framework": "^4"
             },
@@ -343,18 +344,18 @@
             },
             "type": "silverstripe-vendormodule",
             "extra": {
-                "installer-name": "facebook-token-converter"
+                "installer-name": "silverstripe-facebook-feed"
             },
             "autoload": {
                 "psr-4": {
-                    "Dexven\\TokenConverter\\": "src/"
+                    "Dexven\\FacebookFeed\\": "src/"
                 }
             },
             "license": [
                 "BSD-3-Clause"
             ],
-            "description": "Allows creation of long-lived Facebook access tokens to be used in the display of social media feeds.",
-            "homepage": "https://github.com/Dexven/facebook-token-converter",
+            "description": "Allows creation of permanent Facebook access tokens to be used in the display of social media feeds.",
+            "homepage": "https://github.com/Dexven/silverstripe-facebook-feed",
             "keywords": [
                 "facebook",
                 "feed",
@@ -362,9 +363,9 @@
                 "silverstripe"
             ],
             "support": {
-                "issues": "https://github.com/Dexven/facebook-token-converter/issues"
+                "issues": "https://github.com/Dexven/silverstripe-facebook-feed/issues"
             },
-            "time": "2019-08-05T01:39:25+00:00"
+            "time": "2019-09-18T00:47:09+00:00"
         },
         {
             "name": "dnadesign/silverstripe-elemental",
@@ -706,16 +707,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787"
+                "reference": "dc1dc3c126f8a78acdae06b83f591c0728ea131d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/960bbd5a62c5697302bd5394d58efba2e998b787",
-                "reference": "960bbd5a62c5697302bd5394d58efba2e998b787",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/dc1dc3c126f8a78acdae06b83f591c0728ea131d",
+                "reference": "dc1dc3c126f8a78acdae06b83f591c0728ea131d",
                 "shasum": ""
             },
             "require": {
@@ -741,9 +742,9 @@
             "authors": [
                 {
                     "name": "Oscar Otero",
-                    "role": "Developer",
                     "email": "oom@oscarotero.com",
-                    "homepage": "http://oscarotero.com"
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
                 }
             ],
             "description": "PHP library to retrieve page info using oembed, opengraph, etc",
@@ -755,7 +756,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2019-07-20T17:05:41+00:00"
+            "time": "2019-09-16T19:34:02+00:00"
         },
         {
             "name": "giggsey/libphonenumber-for-php",
@@ -960,6 +961,122 @@
                 "silverstripe"
             ],
             "time": "2019-05-30T06:14:57+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "6.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/promises": "^1.0",
+                "guzzlehttp/psr7": "^1.4",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+                "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2018-04-22T15:46:56+00:00"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2016-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -4122,16 +4239,16 @@
         },
         {
             "name": "undefinedoffset/silverstripe-nocaptcha",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/silverstripe-nocaptcha.git",
-                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc"
+                "reference": "fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/a7767503563618e6aeb3afdf16699093808cbbfc",
-                "reference": "a7767503563618e6aeb3afdf16699093808cbbfc",
+                "url": "https://api.github.com/repos/UndefinedOffset/silverstripe-nocaptcha/zipball/fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb",
+                "reference": "fc0e6129a3bfca5cf4ccf79dbb40cce8ced8c3bb",
                 "shasum": ""
             },
             "require": {
@@ -4160,8 +4277,8 @@
             "authors": [
                 {
                     "name": "Ed Chipman",
-                    "role": "Developer",
-                    "homepage": "http://www.edchipman.ca"
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
                 }
             ],
             "description": "A spam protector and form field using the new Google's reCAPTCHA 2 aka No Captcha",
@@ -4172,7 +4289,7 @@
                 "silverstripe",
                 "spamprotection"
             ],
-            "time": "2019-07-29T13:29:58+00:00"
+            "time": "2019-09-16T20:00:32+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -5497,7 +5614,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "heyday/silverstripe-colorpalette": 20,
-        "dexven/facebook-token-converter": 20,
         "gorriecoe/silverstripe-linkfield": 20
     },
     "prefer-stable": true,
