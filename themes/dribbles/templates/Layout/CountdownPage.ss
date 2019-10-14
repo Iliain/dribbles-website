@@ -46,11 +46,13 @@
 
                                     <div class="box" style="box-shadow: 0 0 0 rgba(0, 0, 0, 0)">
                                         <article class="media">
-                                            <div class="media-left">
-                                                <figure class="image is-128x128">
-                                                    <img src="$Image.URL" alt="Image">
-                                                </figure>
-                                            </div>
+                                            <% if $Image %>
+                                                <div class="media-left">
+                                                    <figure class="image is-128x128">
+                                                        <img src="$Image.URL" alt="Image">
+                                                    </figure>
+                                                </div>
+                                            <% end_if %>
                                             <div class="media-content">
                                                 <div class="content">
                                                     <h2>$Name</h2>
@@ -83,18 +85,22 @@
                                                     <p style="font-size: 1.5em "><em>$Quote</em></p>
                                                 </div>
                                             </div>
-                                            <div class="media-right">
-                                                <figure class="image is-128x128">
-                                                    <img src="$Image.URL" alt="Image">
-                                                </figure>
-                                            </div>
+                                            <% if $Image %>
+                                                <div class="media-right">
+                                                    <figure class="image is-128x128">
+                                                        <img src="$Image.URL" alt="Image">
+                                                    </figure>
+                                                </div>
+                                            <% end_if %>
                                         </article>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-
+                        <% if not $Last %>
+                            </div><div class="columns">
+                        <% end_if %>
                     <% end_if %>
 
                 <% end_loop %>
