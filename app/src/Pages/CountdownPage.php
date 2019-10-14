@@ -4,7 +4,10 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\TimeField;
+use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 class CountdownPage extends Page
 {
@@ -18,6 +21,10 @@ class CountdownPage extends Page
 
     private static $has_one = [
         'BackgroundImage' => Image::class,
+    ];
+
+    private static $has_many = [
+        'Testimonies' => GuildTestimony::class,
     ];
 
     private static $owns = [
@@ -36,6 +43,14 @@ class CountdownPage extends Page
             CheckboxField::create('Elapse')->setDescription('Count up after reaching the end date and time'),
             UploadField::create('BackgroundImage')
         ]);
+
+        $fields->addFieldToTab('Root.Testimonies', GridField::create(
+            'Testimonies',
+            'Testimonies',
+            $this->Testimonies(),
+            GridFieldConfig_RecordEditor::create()->addComponent(new GridFieldOrderableRows())
+        ));
+
         return $fields;
     }
 

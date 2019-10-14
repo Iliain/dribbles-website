@@ -34,9 +34,97 @@
     <div class="has-image"></div>
 </section>
 
-<% require javascript('silverstripe/admin: thirdparty/jquery/jquery.js') %>
+<% if $Testimonies %>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <% loop $Testimonies %>
+                    <% if $Odd %>
+                        <div class="column is-7">
+                            <div id="drawer-left">
+                                <div id="drawer-content-left">
+
+                                    <div class="box" style="box-shadow: 0 0 0 rgba(0, 0, 0, 0)">
+                                        <article class="media">
+                                            <div class="media-left">
+                                                <figure class="image is-128x128">
+                                                    <img src="$Image.URL" alt="Image">
+                                                </figure>
+                                            </div>
+                                            <div class="media-content">
+                                                <div class="content">
+                                                    <h2>$Name</h2>
+                                                    <p>$Position</p>
+                                                    <p style="font-size: 1.5em "><em>$Quote</em></p>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column"></div>
+                        <% if not $Last %>
+                            </div><div class="columns">
+                        <% end_if %>
+                    <% else %>
+                        <div class="column"></div>
+                        <div class="column is-7">
+                            <div id="drawer-right">
+                                <div id="drawer-content-right">
+
+                                    <div class="box" style="box-shadow: 0 0 0 rgba(0, 0, 0, 0);">
+                                        <article class="media">
+                                            <div class="media-content">
+                                                <div class="content" style="text-align: right;">
+                                                    <h2>$Name</h2>
+                                                    <p>$Position</p>
+                                                    <p style="font-size: 1.5em "><em>$Quote</em></p>
+                                                </div>
+                                            </div>
+                                            <div class="media-right">
+                                                <figure class="image is-128x128">
+                                                    <img src="$Image.URL" alt="Image">
+                                                </figure>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <% end_if %>
+
+                <% end_loop %>
+
+            </div>
+
+        </div>
+    </section>
+<% end_if %>
+
+
+<% require javascript('silverstripe/admin: thirdparty/jquery-ui/jquery-ui.js') %>
 <% require javascript('dynamic/silverstripe-elemental-countdown: thirdparty/jquery.countdown-2.1.0/jquery.countdown.min.js') %>
 <% require javascript('dynamic/silverstripe-elemental-countdown: client/dist/countdown.init.min.js') %>
+
+<script type="text/javascript">
+    $('#drawer-content-left').hide('slide',{direction:'left'},1);
+    $('#drawer-content-right').hide('slide',{direction:'right'},1);
+    $(window).scroll(function() {
+        if ($('#drawer-left').is(':visible')) {
+            // $("#drawer-content-left").animate({ "margin-right": 0 }, "slow");
+            $("#drawer-content-left").show("slide", {direction: "right"}, 2000);
+        }
+        if ($('#drawer-right').is(':visible')) {
+            // $("#drawer-content-right").animate({ "margin-left": 0 }, "slow");
+            $("#drawer-content-right").show("slide", {direction: "left"}, 2000);
+        }
+    });
+
+</script>
 
 <style>
     html.has-navbar-fixed-top,
@@ -61,4 +149,17 @@
         -ms-filter: blur(6px);
         filter: blur(6px);
     }
+
+    #drawer-left, #drawer-right {
+        /*position: absolute;*/
+        overflow-x: hidden; /* Needed for initial hidden state */
+    }
+
+    /*#drawer-content-left {*/
+        /*margin-right: -100%; !* -width *!*/
+    /*}*/
+
+    /*#drawer-content-right {*/
+        /*margin-left: -100%; !* -width *!*/
+    /*}*/
 </style>

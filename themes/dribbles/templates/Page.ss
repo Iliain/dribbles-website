@@ -17,9 +17,9 @@
 <body class="has-navbar-fixed-top">
     <% include Navigation %>
     $Layout
-    <% if $ClassName != "CountdownPage" %>
-        <% include Footer %>
-    <% end_if %>
+
+    <% include Footer %>
+
 
     <script type="text/javascript">
         $(document).ready(function() {
