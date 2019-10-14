@@ -45,7 +45,7 @@
 
     .has-image {
         background: linear-gradient(rgba(54, 54, 54, 0.80), rgba(54, 54, 54, 0.80)),
-        url("$BackgroundImage");
+        url("$BackgroundImage.URL");
         background-position: center center;
         background-repeat: no-repeat;
         /*background-attachment: fixed;*/
