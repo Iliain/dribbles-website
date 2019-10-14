@@ -41,8 +41,8 @@
                 <% loop $Testimonies %>
                     <% if $Odd %>
                         <div class="column is-7">
-                            <div id="drawer-left">
-                                <div id="drawer-content-left">
+                            <div class="drawer-left">
+                                <div class="drawer-content-left">
 
                                     <div class="box" style="box-shadow: 0 0 0 rgba(0, 0, 0, 0)">
                                         <article class="media">
@@ -73,8 +73,8 @@
                     <% else %>
                         <div class="column"></div>
                         <div class="column is-7">
-                            <div id="drawer-right">
-                                <div id="drawer-content-right">
+                            <div class="drawer-right">
+                                <div class="drawer-content-right">
 
                                     <div class="box" style="box-shadow: 0 0 0 rgba(0, 0, 0, 0);">
                                         <article class="media">
@@ -117,16 +117,16 @@
 <% require javascript('dynamic/silverstripe-elemental-countdown: client/dist/countdown.init.min.js') %>
 
 <script type="text/javascript">
-    $('#drawer-content-left').hide('slide',{direction:'left'},1);
-    $('#drawer-content-right').hide('slide',{direction:'right'},1);
+    $('.drawer-content-left').hide('slide',{direction:'left'},1);
+    $('.drawer-content-right').hide('slide',{direction:'right'},1);
     $(window).scroll(function() {
-        if ($('#drawer-left').is(':visible')) {
+        if ($('.drawer-left').is(':visible')) {
             // $("#drawer-content-left").animate({ "margin-right": 0 }, "slow");
-            $("#drawer-content-left").show("slide", {direction: "right"}, 2000);
+            $(".drawer-content-left").show("slide", {direction: "right"}, 2000);
         }
-        if ($('#drawer-right').is(':visible')) {
+        if ($('.drawer-right').is(':visible')) {
             // $("#drawer-content-right").animate({ "margin-left": 0 }, "slow");
-            $("#drawer-content-right").show("slide", {direction: "left"}, 2000);
+            $(".drawer-content-right").show("slide", {direction: "left"}, 2000);
         }
     });
 
