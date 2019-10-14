@@ -37,7 +37,7 @@ class GuildTestimony extends DataObject
         $fields->addFieldtoTab('Root.Main', TextField::create('Name', 'Name'));
         $fields->addFieldtoTab('Root.Main', TextField::create('Position', 'Position'));
         $fields->addFieldtoTab('Root.Main', HTMLEditorField::create('Quote', 'Quote'));
-        $fields->addFieldtoTab('Root.Main', UploadField::create('Image', 'Image'));
+        $fields->addFieldtoTab('Root.Main', UploadField::create('Image', 'Image')->setFolderName('Uploads/guild-photos'));
 
         return $fields;
     }
