@@ -38,7 +38,7 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <% loop $Testimonies %>
+                <% loop $Testimonies.Sort("Sort ASC") %>
                     <% if $Odd %>
                         <div class="column is-7">
                             <div class="drawer-left">
@@ -56,8 +56,8 @@
                                             <div class="media-content">
                                                 <div class="content">
                                                     <h2>$Name</h2>
-                                                    <p>$Position</p>
-                                                    <p style="font-size: 1.5em "><em>$Quote</em></p>
+                                                    <% if $Position %><p>$Position</p><% end_if %>
+                                                    <% if $Quote %><p style="font-size: 1.5em "><em>$Quote</em></p><% end_if %>
                                                 </div>
                                             </div>
                                         </article>
@@ -81,8 +81,8 @@
                                             <div class="media-content">
                                                 <div class="content" style="text-align: right;">
                                                     <h2>$Name</h2>
-                                                    <p>$Position</p>
-                                                    <p style="font-size: 1.5em "><em>$Quote</em></p>
+                                                    <% if $Position %><p>$Position</p><% end_if %>
+                                                    <% if $Quote %><p style="font-size: 1.5em "><em>$Quote</em></p><% end_if %>
                                                 </div>
                                             </div>
                                             <% if $Image %>
