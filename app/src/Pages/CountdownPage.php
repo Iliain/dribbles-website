@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DateField;
 use SilverStripe\Forms\TimeField;
@@ -16,7 +17,7 @@ class CountdownPage extends Page
     ];
 
     private static $has_one = [
-        'BackgroundImage' => 'Image',
+        'BackgroundImage' => Image::class,
     ];
 
     public function getCMSFields()
