@@ -15,18 +15,21 @@
   <![endif]-->
 </head>
 <body class="has-navbar-fixed-top">
-  <% include Navigation %>
-  $Layout
-  <% include Footer %>
-  <script type="text/javascript">
-      $(document).ready(function() {
-          // Check for click events on the navbar burger icon
-          $(".navbar-burger").click(function() {
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              $(".navbar-burger").toggleClass("is-active");
-              $(".navbar-menu").toggleClass("is-active");
-          });
-      });
-  </script>
+    <% include Navigation %>
+    $Layout
+    <% if $ClassName != "CountdownPage" %>
+        <% include Footer %>
+    <% end_if %>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+        });
+    </script>
 </body>
 </html>
