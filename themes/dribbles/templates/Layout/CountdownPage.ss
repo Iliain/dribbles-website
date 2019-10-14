@@ -2,7 +2,7 @@
     <div class="hero-body" style="position: relative">
         <div class="container has-text" style="z-index: 1">
             <div class="has-text-centered">
-                <h2 class="subtitle is-2">$Title</h2>
+                <h2 class="subtitle is-2">$MenuTitle</h2>
             </div>
             <br>
             <div class="is-ancestor countdown" id="countdown-$ID" data-end="$End" data-elapse="$Elapse">
