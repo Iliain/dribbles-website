@@ -35,8 +35,9 @@
 </section>
 
 <% if $Testimonies %>
-    <section class="section">
+    <section class="section" id="members">
         <div class="container">
+            <h1 class="subtitle is1 has-text-centered">Our Prominent Members</h1>
             <div class="columns">
                 <% loop $Testimonies.Sort("Sort ASC") %>
                     <% if $Odd %>
