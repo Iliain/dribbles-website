@@ -20,6 +20,10 @@ class CountdownPage extends Page
         'BackgroundImage' => Image::class,
     ];
 
+    private static $owns = [
+        'BackgroundImage'
+    ];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
