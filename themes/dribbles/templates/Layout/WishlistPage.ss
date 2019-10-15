@@ -12,7 +12,14 @@
                         <progress class="progress $ProgressBarColour is-medium is-fullwidth" value="$countOwned" max="$WishItems.Count">$countOwned</progress>
 
                         <h2 class="is-2" style="text-align: center">List</h2>
-                        <p><span id="archiveButton" class="icon is-large" style="cursor: pointer"><i class="fas fa-lg fa-search"></i></span> Hide/show owned items</p>
+                        <p>
+                            <button class="button is-link" id="archiveButton">
+                                <span id="toggleIcon" class="icon is-large" style="cursor: pointer"><i class="fas fa-lg fa-eye-slash"></i></span>
+                                <span id="hideText" style="vertical-align: middle">	&nbsp; Hide owned items</span>
+                            </button>
+
+                        </p>
+
                         <div style="overflow-x: auto;">
                             <table class="table is-bordered is-hoverable is-striped">
                                 <thead>
