@@ -6,43 +6,109 @@
             <div class="column">
                 <div class="content">
                     $ElementalArea
-                    $Form
-                    <% if $WishItems %>
-                        <h2 class="is-2" style="text-align: center">Progress: $calculatePercentage%</h2>
-                        <progress class="progress $ProgressBarColour is-medium is-fullwidth" value="$countOwned" max="$WishItems.Count">$countOwned</progress>
 
-                        <h2 class="is-2" style="text-align: center">List</h2>
-                        <p>
-                            <button class="button is-link" id="archiveButton">
-                                <span id="toggleIcon" class="icon is-large" style="cursor: pointer"><i class="fas fa-lg fa-eye-slash"></i></span>
-                                <span id="hideText" style="vertical-align: middle">	&nbsp; Hide owned items</span>
-                            </button>
+                    <h5 class="title is-5">Unclaimed</h5>
 
-                        </p>
-
-                        <div style="overflow-x: auto;">
-                            <table class="table is-bordered is-hoverable is-striped">
-                                <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <% loop $WishItems %>
-                                    <tr <% if $State = 'Gifted' %>class="archive" style="$Top.GiftedColour"<% else_if $State = 'Purchased' %>class="archive" style="$Top.PurchasedColour"<% end_if %>>
-                                        <td>$Name</td>
-                                        <td>$Type</td>
-                                        <td>$Description</td>
-                                    </tr>
-                                    <% end_loop %>
-                                </tbody>
-                            </table>
+                    <div class="columns">
+                        <div class="column" id="unclaimed-items">
+                            <% if $getWishItems('Unclaimed') %>
+                                <% loop $getWishItems('Unclaimed') %>
+                                    <article class="panel is-info unclaimed" id="panel-$ID">
+                                        <p class="panel-heading" style="margin-bottom: 0">
+                                            $Title
+                                        </p>
+                                        <div class="panel-block">
+                                            <span class="panel-icon">
+                                              <i class="fas fa-tag" aria-hidden="true"></i>
+                                            </span>
+                                            $Type
+                                        </div>
+                                        <div class="panel-block">
+                                            <span class="panel-icon">
+                                              <i class="fas fa-align-left" aria-hidden="true"></i>
+                                            </span>
+                                            $Description
+                                        </div>
+                                        <div class="panel-block" id="form-panel-$ID">
+                                            <form action="{$Top.Link}Claim" method="POST" class="claimForm" id="$ID" style="width: 100%">
+                                                <input type="hidden" id="itemID" name="itemID" value="$ID">
+                                                <button class="button is-link is-fullwidth">
+                                                    Claim
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </article>
+                                <% end_loop %>
+                            <% else %>
+                                <p class="no-unclaimed">There are currently no items in the list.</p>
+                            <% end_if %>
                         </div>
-                    <% end_if %>
+                        <div class="column is-6"></div>
+                    </div>
+
+
+                    <h5 class="title is-5">Claimed</h5>
+                    <div class="columns">
+                        <div class="column" id="claimed-items">
+                            <% if $getWishItems('Claimed') %>
+                                <% loop $getWishItems('Claimed') %>
+                                    <article class="panel is-link claimed">
+                                        <p class="panel-heading" style="margin-bottom: 0">
+                                            $Title
+                                        </p>
+                                        <div class="panel-block">
+                                            <span class="panel-icon">
+                                              <i class="fas fa-tag" aria-hidden="true"></i>
+                                            </span>
+                                            $Type
+                                        </div>
+                                        <div class="panel-block">
+                                            <span class="panel-icon">
+                                              <i class="fas fa-align-left" aria-hidden="true"></i>
+                                            </span>
+                                            $Description
+                                        </div>
+                                    </article>
+                                <% end_loop %>
+                            <% else %>
+                                <p id="no-claimed">There are currently no items in the list.</p>
+                            <% end_if %>
+                        </div>
+                        <div class="column is-6"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function (){
+        $('.claimForm').on('submit', function (e) {
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+
+            var form = $(this);
+            var url = form.attr('action');
+            var id = form.attr('ID');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), // serializes the form's elements.
+                success: function(data){
+                    $('#panel-' + id).appendTo('#claimed-items');
+                    $('#panel-' + id).removeClass('unclaimed');
+                    $('#form-panel-' + id).hide();
+
+                    if ($('p#no-claimed')) {
+                        $('p#no-claimed').remove()
+                    }
+
+                    if ($('article.unclaimed').length === 0) {
+                        $('<p class="no-unclaimed">There are currently no items in the list.</p>').appendTo('#unclaimed-items')
+                    }
+                }
+            });
+        });
+    });
+</script>

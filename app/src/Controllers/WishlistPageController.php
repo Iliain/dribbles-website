@@ -1,11 +1,16 @@
 <?php
 
+use SilverStripe\Dev\Debug;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\ORM\PaginatedList;
 use SilverStripe\View\Requirements;
 
 class WishlistPageController extends PageController
 {
+    private static $allowed_actions = [
+        'Claim',
+    ];
+
     public function init()
     {
         parent::init();
@@ -25,23 +30,31 @@ class WishlistPageController extends PageController
         return number_format(number_format((float)$number, 0, '.', ''));
     }
 
-    public function getWishItems()
+    public function getWishItems($status = null)
     {
-        $wishItems = $this->WishItems();
+        $wishItems = $this->WishItems()->filter('State', $status);
 
         if ($wishItems) {
-            $list = PaginatedList::create($wishItems);
-            $list->setPageLength(30);
-
-            // Ensure that the pagination start is a multiple of the pagination length
-            $start = $list->getPageStart();
-            if ($start % 30 > 0) {
-                $list->setPageStart($start - ($start % 30));
-            }
-
-            return $list;
+            return $wishItems;
         }
 
         return ArrayList::create();
+    }
+
+    public function Claim($request)
+    {
+        $id = $request->postVar('itemID');
+
+        if ($id) {
+            $item = WishItem::get()->byID($id);
+
+            if ($item) {
+                $item->State = 'Claimed';
+                $item->write();
+                return true;
+            }
+        }
+
+        return false;
     }
 }

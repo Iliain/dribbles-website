@@ -11,7 +11,7 @@ class WishItem extends DataObject
         'Sort'          => 'Int',
         'Name'          => 'Varchar(255)',
         'Type'          => 'Varchar(255)',
-        'State'         => 'Enum("Purchased,Gifted,Awaiting","Awaiting")',
+        'State'         => 'Enum("Unclaimed,Claimed","Unclaimed")',
         'Description'   => 'HTMLText'
     ];
 
@@ -23,6 +23,10 @@ class WishItem extends DataObject
         'Name'          => 'Name',
         'Type'          => 'Type',
         'State'         => 'Status'
+    ];
+
+    private static $defaults = [
+        'State'         => 'Unclaimed',
     ];
 
     public function getCMSFields()
