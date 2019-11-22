@@ -43,6 +43,12 @@
                                         </div>
                                     </article>
                                 </div>
+
+                                <% if $Top.getRowCount($Pos, 2) %>
+                                    </div>
+                                    <div class="column unclaimed-item is-6">
+                                <% end_if %>
+
                             <% end_loop %>
                         <% else %>
                             <p class="no-unclaimed">There are currently no items in the list.</p>
