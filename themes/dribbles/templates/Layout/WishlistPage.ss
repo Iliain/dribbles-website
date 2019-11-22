@@ -36,7 +36,7 @@
                                         <div class="panel-block" id="form-panel-$ID">
                                             <form action="{$Top.Link}Claim" method="POST" class="claimForm" id="$ID" style="width: 100%">
                                                 <input type="hidden" id="itemID" name="itemID" value="$ID">
-                                                <button class="button is-link is-fullwidth">
+                                                <button class="button is-link is-fullwidth" id="button-$ID">
                                                     Claim
                                                 </button>
                                             </form>
@@ -104,28 +104,33 @@
             var form = $(this);
             var url = form.attr('action');
             var id = form.attr('ID');
+            var button = $('#button-' + id);
+            button.text(' ');
+            button.append('<i id="' + id + '" class="fas fa-spinner fa-spin"></i>');
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: form.serialize(), // serializes the form's elements.
-                success: function(data){
-                    var panel = $('#panel-' + id);
-                    panel.appendTo('#claimed-items');
-                    panel.removeClass('unclaimed');
-                    panel.removeClass('is-info');
-                    $('#form-panel-' + id).hide();
+            setTimeout(function() {
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data){
+                        var panel = $('#panel-' + id);
+                        panel.appendTo('#claimed-items');
+                        panel.removeClass('unclaimed');
+                        panel.removeClass('is-info');
+                        $('#form-panel-' + id).hide();
 
-                    if ($('p#no-claimed')) {
-                        $('p#no-claimed').remove()
+                        if ($('p#no-claimed')) {
+                            $('p#no-claimed').remove()
+                        }
+
+                        if ($('article.unclaimed').length === 0) {
+                            $('.unclaimed-item').hide();
+                            $('<p class="no-unclaimed">There are currently no items in the list.</p>').appendTo('#unclaimed-items')
+                        }
                     }
-
-                    if ($('article.unclaimed').length === 0) {
-                        $('.unclaimed-item').hide();
-                        $('<p class="no-unclaimed">There are currently no items in the list.</p>').appendTo('#unclaimed-items')
-                    }
-                }
-            });
+                });
+            }, 1500);
         });
     });
 </script>
