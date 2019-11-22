@@ -17,18 +17,22 @@
                                         <p class="panel-heading" style="margin-bottom: 0">
                                             $Title
                                         </p>
-                                        <div class="panel-block">
-                                            <span class="panel-icon">
-                                              <i class="fas fa-tag" aria-hidden="true"></i>
-                                            </span>
-                                            $Type
-                                        </div>
-                                        <div class="panel-block">
-                                            <span class="panel-icon">
-                                              <i class="fas fa-align-left" aria-hidden="true"></i>
-                                            </span>
-                                            $Description
-                                        </div>
+                                        <% if $Type %>
+                                            <div class="panel-block">
+                                                <span class="panel-icon">
+                                                  <i class="fas fa-tag" aria-hidden="true"></i>
+                                                </span>
+                                                $Type
+                                            </div>
+                                        <% end_if %>
+                                        <% if $Description %>
+                                            <div class="panel-block">
+                                                <span class="panel-icon">
+                                                  <i class="fas fa-align-left" aria-hidden="true"></i>
+                                                </span>
+                                                $Description
+                                            </div>
+                                        <% end_if %>
                                         <div class="panel-block" id="form-panel-$ID">
                                             <form action="{$Top.Link}Claim" method="POST" class="claimForm" id="$ID" style="width: 100%">
                                                 <input type="hidden" id="itemID" name="itemID" value="$ID">
@@ -52,22 +56,26 @@
                         <div class="column" id="claimed-items">
                             <% if $getWishItems('Claimed') %>
                                 <% loop $getWishItems('Claimed') %>
-                                    <article class="panel is-link claimed">
+                                    <article class="panel is-primary claimed">
                                         <p class="panel-heading" style="margin-bottom: 0">
                                             $Title
                                         </p>
-                                        <div class="panel-block">
-                                            <span class="panel-icon">
-                                              <i class="fas fa-tag" aria-hidden="true"></i>
-                                            </span>
-                                            $Type
-                                        </div>
-                                        <div class="panel-block">
-                                            <span class="panel-icon">
-                                              <i class="fas fa-align-left" aria-hidden="true"></i>
-                                            </span>
-                                            $Description
-                                        </div>
+                                        <% if $Type %>
+                                            <div class="panel-block">
+                                                <span class="panel-icon">
+                                                  <i class="fas fa-tag" aria-hidden="true"></i>
+                                                </span>
+                                                $Type
+                                            </div>
+                                        <% end_if %>
+                                        <% if $Description %>
+                                            <div class="panel-block">
+                                                <span class="panel-icon">
+                                                  <i class="fas fa-align-left" aria-hidden="true"></i>
+                                                </span>
+                                                $Description
+                                            </div>
+                                        <% end_if %>
                                     </article>
                                 <% end_loop %>
                             <% else %>
@@ -96,8 +104,11 @@
                 url: url,
                 data: form.serialize(), // serializes the form's elements.
                 success: function(data){
-                    $('#panel-' + id).appendTo('#claimed-items');
-                    $('#panel-' + id).removeClass('unclaimed');
+                    var panel = $('#panel-' + id);
+                    panel.appendTo('#claimed-items');
+                    panel.removeClass('unclaimed');
+                    panel.removeClass('is-info');
+                    panel.addClass('is-primary');
                     $('#form-panel-' + id).hide();
 
                     if ($('p#no-claimed')) {
