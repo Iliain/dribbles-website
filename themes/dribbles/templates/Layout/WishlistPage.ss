@@ -9,10 +9,10 @@
 
                     <h5 class="title is-5">Unclaimed</h5>
 
-                    <div class="columns">
-                        <div class="column" id="unclaimed-items">
-                            <% if $getWishItems('Unclaimed') %>
-                                <% loop $getWishItems('Unclaimed') %>
+                    <div class="columns" id="unclaimed-items">
+                        <% if $getWishItems('Unclaimed') %>
+                            <% loop $getWishItems('Unclaimed') %>
+                                <div class="column unclaimed-item is-6">
                                     <article class="panel is-info unclaimed" id="panel-$ID">
                                         <p class="panel-heading" style="margin-bottom: 0">
                                             $Title
@@ -42,21 +42,22 @@
                                             </form>
                                         </div>
                                     </article>
-                                <% end_loop %>
-                            <% else %>
-                                <p class="no-unclaimed">There are currently no items in the list.</p>
-                            <% end_if %>
-                        </div>
-                        <div class="column is-6"></div>
+                                </div>
+                            <% end_loop %>
+                        <% else %>
+                            <p class="no-unclaimed">There are currently no items in the list.</p>
+                        <% end_if %>
                     </div>
 
+                    <div class="is-divider"></div>
 
                     <h5 class="title is-5">Claimed</h5>
+                    <p>The following the list contains all the items that someone has either said they wanna get, or simply ones I've bought myself.</p>
                     <div class="columns">
                         <div class="column" id="claimed-items">
                             <% if $getWishItems('Claimed') %>
                                 <% loop $getWishItems('Claimed') %>
-                                    <article class="panel is-primary claimed">
+                                    <article class="panel claimed">
                                         <p class="panel-heading" style="margin-bottom: 0">
                                             $Title
                                         </p>
@@ -82,7 +83,6 @@
                                 <p id="no-claimed">There are currently no items in the list.</p>
                             <% end_if %>
                         </div>
-                        <div class="column is-6"></div>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,6 @@
                     panel.appendTo('#claimed-items');
                     panel.removeClass('unclaimed');
                     panel.removeClass('is-info');
-                    panel.addClass('is-primary');
                     $('#form-panel-' + id).hide();
 
                     if ($('p#no-claimed')) {
@@ -116,6 +115,7 @@
                     }
 
                     if ($('article.unclaimed').length === 0) {
+                        $('.unclaimed-item').hide();
                         $('<p class="no-unclaimed">There are currently no items in the list.</p>').appendTo('#unclaimed-items')
                     }
                 }
