@@ -46,7 +46,7 @@
 
                                 <% if $Top.getRowCount($Pos, 2) %>
                                     </div>
-                                    <div class="column unclaimed-item is-6">
+                                    <div class="columns" id="unclaimed-items">
                                 <% end_if %>
 
                             <% end_loop %>
